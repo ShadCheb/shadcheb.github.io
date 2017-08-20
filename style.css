@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    border: none;
+}
+
+body{
+    background: #08090a; font-family: DIN Next W1G, sans-serif; color: #ffffff;
+}
+
+.karkas{
+}
+/*Верхушка*/
+.top-main{
+    width: 100%; background: #b80433; 
+}
+.top{
+    overflow: hidden;
+    background: #b80433;
+    font-size: 20px;
+    font-family:  Segoe UI, sans-serif;
+    padding: 10px 0px;
+}
+.top img{
+    width: 30px;
+}
+.koord {
+    float: left;
+    height: 30px;
+}
+.koord img{
+    display:inline-block;
+    vertical-align: middle;
+    margin-right: 14px;
+}
+.koord span{
+    display:inline-block;
+    vertical-align: middle;
+    margin-right: 38px;
+}
+.seti{
+    float: right;
+    height: 30px;
+}
+.seti img{
+    display:inline-block;
+    vertical-align: middle;
+    margin-left: 14px;
+}
+
+/*Главная картинка*/
+.head{
+    background: url(img/men.png) no-repeat;
+    text-align: left;
+    padding-bottom: 40px;
+}
+    .head img{
+        width: 20   0px;
+        padding: 20px 0px;
+    }
+    .head h1{
+        padding: 26px 0px;
+        font-size: 36px;
+        color: #b80433;
+    }
+    .head h2{
+        font-size: 18px;
+        color: #adadad;
+    }
+    .head .button{
+        border: 2px solid;
+        border-color: #b80433;
+        margin-top: 40px;
+        padding: 25px 32px;
+        font-size: 18px;
+        width: 240px;
+    }
+/*меню*/
+.menu-main{
+    background: #b80433; width: 100%;
+}
+.menu{
+}
+.menu ul{
+    overflow: hidden;
+}
+.menu ul li{
+    float: left;
+    width: 24.8%;
+    list-style: none;
+    text-align: center;
+    padding: 15px 0px;
+    margin: 10px 0px;
+}
+.menu li.one_list{
+    padding: 25px 0px;
+    margin: 10px 0px;
+    border-right: 2px solid #ffffff;
+}
+.menu li.two_list{
+    padding: 25px 0px;
+    margin: 10px 0px;
+}
+.menu ul li.line{
+   border-right: 2px solid #ffffff;
+}
+.menu ul a li{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+.menu ul a li:hover{
+    text-decoration: underline;
+}
+
+/*Программы тренеровок*/
+.program{
+    overflow: hidden;
+}
+    .block{
+        float: left;
+        width: 50%;
+        background: #3c3b3b;
+    }
+    .block img{
+        width: 100%;
+        opacity: 0.5;
+    }
+    .block:hover{
+        background: #b80433;
+    }
+/*Цены*/
+.pricing{
+    overflow: hidden;
+    padding-bottom: 70px;
+}
+    .head-p{
+        text-align: center;
+        padding: 70px 0px 50px 0px;
+       
+    }
+    .head-p h1{
+        font-size: 34px; 
+    }
+    .pricing .pric-table{
+        float: left;
+        width: 50%;
+        overflow: hidden;
+    }
+    .pricing .pric-table table{
+        border-collapse: collapse;
+        float: left;
+        width: 100%;
+    }
+    .pricing table tr td{
+        border: 2px solid #ffffff;
+        font-family: DIN Next W1G, sans-serif;
+        font-size: 18px;
+    }
+    .pricing table tr td{
+        width: 100px;
+        padding: 8px 20px;
+    }
+    .pricing .price-img{
+        float: right;
+        width: 50%;
+    }
+    .pricing .price-img img{
+        display: block;
+        margin: 0 auto;
+    }
+/*Тренеры*/
+.trainers-main{
+    background: url(img/asphalt.png) repeat-x;
+    width: 100%;
+    padding-bottom: 70px;
+}
+.trainers table{
+    width: 100%;
+	border-spacing: 30px;
+}
+.trainers table h1{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #60061f;
+    text-align: center;
+    margin: 30 0 10 0;
+}
+.trainers table p{
+    font-size: 18px;
+    color: #60061f;
+    margin: 0 15 20 15;
+}
+.trainers .trainer-1, .trainers .trainer-2{
+    overflow: hidden;
+}
+    .trainers .trainer-1 img{
+        float: left;
+        margin-right: 15px;
+    }
+    .trainers .trainer-2 img{
+    float: right;
+    }
+.trainers .trainer-3{
+    vertical-align: top;
+}
+    .trainers .trainer-3 img{
+        width: 100%;
+    }
+.trainers table tr td{
+    background-color: white;
+}
+
+/*Галерея*/
+.gallery-main{
+    padding-bottom: 70px;
+}
+.gallery{
+    margin: 0 auto; overflow: hidden; position: relative; padding-bottom: 30px;
+}
+.left{
+    float: left; width: 40%;
+}
+    .left img{
+        width: 100%; opacity: 0.6;
+    }
+.right{
+    float: right; width: 40%;
+}
+    .right img{
+        width: 100%;  opacity: 0.6;
+    }
+.up{
+    position: absolute; width: 40%; top: 50px; left: 30%;
+}
+    .up img{
+        width: 100%;
+    }
+.str{
+    overflow: hidden; width: 145px; margin: 20 auto;
+}
+    .str img{
+        width: 70px; margin: 0 auto;
+    }
+
+/*Видео*/
+.video-main{
+    background-image: url(img/asphalt-red.png); width: 100%;
+}
+.video{
+    overflow: hidden; padding-bottom: 70px;
+}
+    .video1, .video2, .video3{
+        width: 33%; float: left;
+    }
+    .video img{
+        width: 95%; margin-bottom: 20px;
+    }
+    .video p{
+        text-align: center;
+    }
+
+/*футер*/
+.footer{
+    overflow: hidden;
+}
+.contacts-footer, .navigator-footer, .maps-footer{
+    width: 33%; float: left;
+}
+.contacts-footer img, .contacts-footer h1 .contacts-footer p{
+    float: left;
+}
+.navigator-footer img, .navigator-footer h1{
+    float: left;
+} 
+
+
+@media only screen and (min-width: 769px){
+    .top, .head, .menu, .program, .pricing, .trainers, .gallery-main, .video, .footer{
+        max-width: 1170px; margin: 0 auto;
+    }
+}
