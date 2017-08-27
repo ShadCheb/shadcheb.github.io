@@ -1,0 +1,77 @@
+body{
+	margin: 0;
+	padding: 0;
+	font: 1em/1.4em sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*Внешний вид меню*/
+.side{
+	width: 200px;
+	margin: 20px;
+}
+.menu a{
+	background: #3d3d3d;
+	color: #fff;
+	padding: 10px;
+	display: block;
+	border-bottom: 1px solid #666;
+	transition: 0.5s all;  /*анимация*/
+}
+	.menu a:hover{
+		background: #666;
+		padding: 10px 0 10px 20px;
+	}
+.menu li:first-child a,
+.menu li .menu-drop li:first-child a{     /*первый дочерний элемент*/
+	border-radius: 3px 3px 0 0;
+}
+.menu li:last-child a, 
+.menu li .menu-drop li:last-child a{     /*первый дочерний элемент*/
+	border-radius: 0 0 3px 3px;
+	border-bottom: 0;
+}
+.menu li .menu-drop li a{
+	border-radius: 0;
+	border-bottom: 1px solid #666;
+}
+
+/*Всплывающие меню*/
+.menu-list{
+	position: relative;
+}
+.menu-drop{
+	position: absolute;
+	width: 100%;
+	left: 100%;
+	opacity: 0;
+	border-left: 10px solid transparent; /*transporent прозрачное*/
+	top: -9999em;  поднимаем расположение*/
+	transition: 0.5s opacity;
+}
+.menu-list:hover .menu-drop{
+	opacity: 1;
+	top: 0;
+	transition: 0.5s opacity;
+}
+
+/*Иконки для всплывающих меню*/
+.menu-list::after{  /*Псевдоэлемент after*/
+	content: " ";
+	position: absolute;
+	border: 5px solid;
+	border-color: transparent transparent transparent #fff;
+	top: 1em;
+	right:  0.7em;
+	transition: 0.5s;
+}
+.menu-list:hover::after{  /**/
+	transform: scaleX(-1); /*отразить по вертикали*/
+}

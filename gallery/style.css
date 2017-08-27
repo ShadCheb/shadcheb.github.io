@@ -1,0 +1,77 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: #1c1c1c;
+	font-family: 1em/1.4em sans-serif;
+}
+.karkas{
+	margin: 20px auto; width: 680px;
+}
+.head{
+	background: #ffa200; padding: 10px 20px; margin-top: 1px;
+}
+.text{
+	background: #ffa200; padding: 0; opacity: 0; background: #f58500; overflow: hidden; height: 0;
+}
+
+	.head:hover{
+		background: #f58500;
+	}
+	.head.click{
+		background: #f58500; padding-left: 400px;
+	}
+	.text.click{
+		opacity: 1; height: auto; transition: 1s; padding: 10px 20px;
+	}
+
+	.head.click, .head, .block{
+	    transition: all 2s;
+	}
+
+
+/*картинки в списке*/
+
+.text table{
+	border-collapse: collapse; width: 639px;
+}
+	td.image{
+		width: 213px; height: 173px; position: relative;
+	}
+	td.image img{
+		width: 100%; border: 1px solid  #f58500; 
+	}
+
+
+	td.image img:hover {
+		border: 1px solid #ffa200; position: absolute; top: -10px; left: -12px; width: 237px; z-index: 2;
+	}
+
+
+
+
+/*Модальное окно*/
+.my-modal{
+	display: none;	position: fixed; z-index: 3; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.8);
+}
+.my-modal.click{
+	display: block;
+}
+
+.modal-content{
+	background: #fefefe;
+	margin: 2% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+}
+.close{
+	color: #fff; float: right; font-size: 28px; font-weight: bold;
+}
+
+.modal-content span{
+	background: #f58500; padding: 0 7px;
+}
+
+.modal-content img{
+	width: 100%;
+}
