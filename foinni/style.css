@@ -1,0 +1,100 @@
+body{
+	margin: 0; padding: 0; font-family: arial, sans-serif;
+}
+img{
+    border: none;
+}
+.karkas{
+	margin: 0; padding: 0; background: #fff;
+}
+.header-pic{
+	background-image: url(img/head.png); color: #fff; padding-bottom: 245px;
+}
+.top-menu-main{
+	border-bottom: 1px solid #8f8e91;
+}
+.top-menu{
+	overflow: hidden; 
+}
+	.top-menu img{
+		float: left; margin: 43px 0 40px 0; height: 36px;
+	}
+	.top-menu ul{
+		overflow: hidden; margin-top: 42px;
+	}
+		.top-menu ul a li{
+			list-style: none; float: right; margin-left: 28px; padding: 14px 0; text-decoration: none; color: #fff;
+		}
+		.top-menu ul a li:hover{
+			color: #1dde85; border-bottom: 1px solid #1dde85;
+		}
+	.head-text{
+		text-align: center;
+	}
+	.head-text h1{
+		font-size: 48px; margin: 245px 0 48px 0;
+	}
+	.head-text span{
+		color: #1dde85;
+	}
+	.head-text p{
+		font-size: 18px;  margin: 0 auto; line-height: 1.67; padding: 0 10%;
+	}
+
+/*Заголовок*/
+.caption{
+	text-align: center;	margin-top: 120px;
+}
+	.caption h2{
+		font-size: 30px; color: #454546; margin-bottom: 50px;
+	}
+	.caption h2 span{
+		color: #1dde85;
+	}
+	.caption p{
+		font-size: 18px; color: #8f8e91; line-height: 1.67;   margin-bottom: 75px;
+	}
+
+/*Welcom*/
+
+.pros{
+	overflow: hidden;
+}
+	.pros-block-main{
+		width: 33.33%; float: left;
+	}
+
+		.pros-block{
+			border: 1px solid #8f8e91; text-align: center; margin: 1px 2.5% 1px 2.5%; padding: 30px 12px 10px 12px; font-size: 14px;  line-height: 2.14;
+		}
+			.pros-block h3{
+				color: #454546;
+			}
+			.pros-block p{
+				color: #8f8e91;
+			}
+			.pros-block:hover{
+				border: 2px solid #1dde85;  margin: 0 2.5% 0 2.5%; padding: 30px 11px 10px 11px;
+
+			}
+				.pros-block:hover h3{
+					color: #1dde85;
+				}
+				.pros-block:hover p{
+					color: #454546;
+				}
+			.pros-block-main:first-child:hover .pros-block{
+				border: 2px solid #1dde85;  margin: 0 5% 0 0;  padding: 30px 11px 10px 11px;
+			}
+			.pros-block-main:last-child:hover .pros-block{
+				border: 2px solid #1dde85;  margin: 0 0 0 5%;  padding: 30px 11px 10px 11px;
+			}
+		.pros-block-main:first-child .pros-block{
+			margin: 1px 5% 1px 0;
+		}
+		.pros-block-main:last-child .pros-block{
+			margin: 1px 0 1px 5%;
+		}
+ .pros{
+	margin-bottom: 45px;
+}

@@ -1,0 +1,41 @@
+body{
+	 margin: 0; padding: 0;
+}
+.karkas{
+	 background: #ccc; width: 100%; padding-bottom: 30px;
+}
+.main{
+	width: 780px; height: 200px; margin: 30 auto; padding: 20px; position: relative;
+}
+
+.pic{
+	width: 300px; position: absolute;
+}
+	.pic img{
+		width: 100%;
+	}
+.pic.left{
+	z-index: 1; top: 60px; left: 0px;
+}
+.pic.right{
+	z-index: 1; top: 60px; right: 0px;
+}
+.pic.up{
+	z-index: 2; width: 400px; top: 30px; left: 200px;
+}
+.pic.shadow-right{
+	right: -200px; top: 60px; opacity: 0; z-index: 1;
+}
+.pic.shadow-left{
+	left: -200px; top: 60px; opacity: 0; z-index: 1;
+}
+
+.str{
+	width: 120px; margin: 0 auto;
+}
+	.str img{
+		width: 50px;
+	}
+ .pic.up, .pic.left, .pic.right, .pic.shadow-left, .pic.shadow-right{
+	transition: 2s;
+}
