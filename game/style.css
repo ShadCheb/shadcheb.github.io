@@ -1,0 +1,263 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.board{
+	position: relative;
+	background: #00AAFF;
+	width: 100%;
+	height: 850px;
+	font-family: "PT Sans Narrow", sans-serif;
+}
+
+	/*Окно приветствия*/
+	.welcom{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 850px;
+		background: #00AAFF;
+	}
+		.welcom h1{
+			text-align: center;
+			color: #fff;
+			font-size: 27px;
+			padding-top: 200px;
+			padding-bottom: 36px;
+		}
+		.welcom span{
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+		.welcom p{
+			text-align: center;
+			color: #fff;
+			font-size: 20px;
+		}
+		.welcom input{
+			display: block;
+			margin: 0 auto;
+		}
+		.welcom .btn{
+			background: #0061BB;
+			border: #000 solid 1px;
+			border-radius:5px;
+			width: 350px;
+			height: 60px;
+			font-size: 20px;
+			color: #fff;
+		}
+			.welcom .btn:hover{
+				background: #00AAFF;
+				color: #0061BB;
+				cursor: pointer;
+			}
+				#btn_auto{
+					margin-bottom: 15px;
+				}
+
+/*Закрытие окна*/
+.opacity{
+	display: none;
+}
+
+
+/*Игровое поле*/
+h3{
+	float: left;
+	color: #fff;
+	padding: 0 114px 0 130px;
+	cursor: default;
+}
+
+
+.table{
+	display: block;
+	height: 670px;
+	padding: 90px;
+	background: #07004b;
+
+}
+
+	.table_tables{
+		overflow: hidden;
+		display: block;
+		margin: 0 auto;
+		width: 750px;
+	}
+	table{
+		float: left;
+		border-spacing: 0px;
+		padding: 10px;
+	}
+		td{
+        	width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            background: #008aff;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+        .cell{
+        	cursor: default;
+        }
+        .titleY{
+			background: rgba(0,0,0,0);
+			border-left-color: rgba(0,0,0,0);
+			cursor: default;
+        }
+        .titleX{
+			background: rgba(0,0,0,0);
+			border-top-color: rgba(0,0,0,0);
+			cursor: default;
+        }
+
+
+
+.messageArea {
+    position: absolute;
+    display: none;
+    top: 250px;
+    left: 100px;
+	width: 215px;
+	height: 40px;
+    color: rgb(83, 175, 19);
+}
+
+
+.popupGameOver{
+	display: none;
+	position: absolute;
+	top: 150px;
+	left: 150px;
+	right: 150px;
+	background: #00AAFF;
+	border-radius: 15px;
+	border: solid 2px #fff;
+	box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+}
+	.popupGameOver p{
+		color: #fff;
+		font-size: 26px;
+		text-align: center;
+		padding-bottom: 10px;
+	}
+	.winMessege{
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		color: #fff;
+		font-size: 40px;
+		padding-bottom: 10px;
+	}
+	.stateMessege{
+		display: block;
+		text-align: left;
+		color: #fff;
+		font-size: 20px;
+		
+	}
+
+@keyframes animatGO{
+	0%{transform: translateY(-1000px);}
+	70%{transform: translateY(50px);}
+	90%{transform: translateY(-10px);}
+	100%{transform: translateY(0px);}
+}
+
+.show{
+	display: block;
+	animation: animatGO 1s;
+}
+
+.imgMessege{
+	display: block;
+	width: 300px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.lose{
+
+	background: url(img/32553.jpg) no-repeat center;
+	background-size: 300px;
+}
+.win{
+	background: url(img/3400a7cc4c590b9f55f55c5863e1707a.jpeg) no-repeat center;
+	background-size: 300px;
+}
+
+/*Сообщения о попадании*/
+@keyframes animatMsg{
+	0%{transform: scale(0); opacity: 0;}
+	100%{transform: scale(1); opacity: 1;}
+}
+.msgSlip{
+	display: block;
+	background: url(img/slip.png);
+	animation: animatMsg 1s;
+	animation-fill-mode: forwards;
+}
+.msgHit{
+	display: block;
+	background: url(img/hit.png);
+	animation: animatMsg 1s;
+	animation-fill-mode: forwards;
+}
+
+
+/*Окно ручной растановки кораблей*/
+.popupManual{
+	display: none;
+	position: absolute;
+	top: -1000;
+	left: 0;
+	width: 100%;
+	height: 850px;
+	background: #00AAFF;
+}
+.showPopapManual{
+	display: block;
+	top: 0;
+}
+	.popupManual p{
+		text-align: center;
+		padding-top: 100px;
+	}
+		.tablePopupManual{
+			display: block;
+			width: 612px;
+			margin: 0 auto;
+		}
+/*
+		.popupManual table{
+			display: block;
+			border-spacing: 0px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		.popupManual td{
+        	width: 70px;
+            height: 70px;
+            border: 1px solid #fff;
+            background: #008aff;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+
+*/
+
+.hit{
+	background: #00ad5d;
+}
+.slip{
+	background: #0060b1;
+}
+.hitEnemy{
+	background: red;
+}
