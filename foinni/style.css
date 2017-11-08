@@ -38,7 +38,7 @@ img{
 		color: #1dde85;
 	}
 	.head-text p{
-		font-size: 18px;  margin: 0 auto; line-height: 1.67; padding: 0 10%;
+		font-size: 18px; width: 914px; margin: 0 auto; line-height: 1.67;
 	}
 
 /*Заголовок*/
@@ -83,10 +83,10 @@ img{
 				.pros-block:hover p{
 					color: #454546;
 				}
-			.pros-block-main:first-child:hover .pros-block{
+			.pros-block-main:first-child .pros-block:hover{
 				border: 2px solid #1dde85;  margin: 0 5% 0 0;  padding: 30px 11px 10px 11px;
 			}
-			.pros-block-main:last-child:hover .pros-block{
+			.pros-block-main:last-child .pros-block:hover{
 				border: 2px solid #1dde85;  margin: 0 0 0 5%;  padding: 30px 11px 10px 11px;
 			}
 		.pros-block-main:first-child .pros-block{
@@ -98,3 +98,144 @@ img{
  .pros{
 	margin-bottom: 45px;
 }
+
+/*Meet Us*/
+
+.people{
+	overflow: hidden;
+	padding: 18px 0;
+}
+
+	.people-block-main{
+		width: 22%; float: left; padding: 0 2% 0 2%;
+	}
+	.people-block-main:first-child{
+		padding: 0 2% 0 0; 
+	}
+	.people-block-main:last-child{
+		padding: 0 0 0 2%; 
+	}
+		.people-block{
+			position: relative;
+		}
+			.people-block h3{
+				padding: 14px 0  4px 0; margin: 0;
+				font-size: 18px;
+				line-height: 20px;
+			}
+			.people-block p{
+				padding: 0 0 14px 0; margin: 0;
+				font-size: 14px;
+				line-height: 17px;
+			}
+			.people-block img{
+				width: 100%;
+			}
+		.people-name{
+			position: absolute;
+			bottom: 0; left: 0; right: 0;
+			text-align: center;
+			background: rgba(69,69,70,0.94);
+			color: #fffcf4;
+		}
+		.people-bcgr{
+			display: none;
+		}
+
+		/*зеленое окно*/
+		.people-block:hover .people-bcgr{
+			display: block;
+			position: absolute;
+			left: -15px; right: -15px; top: -18px; bottom: -18px;
+			padding-top: 60%;
+			background: rgba(29, 222, 133, 0.9);
+			text-align: center;
+			color: #fffcf4;
+		}
+		.people-block:hover .people-name{
+			display: none;
+		}
+		.people-seti{
+			position: relative;
+			padding-top: 80px;
+		}
+		.people-seti:after{
+			content: '';
+			position: absolute;
+			top: 80px; left: 0; right: 0;
+			height: 1px;
+			background: #8fe5bd;
+		}
+		.people-seti:before{
+			content: '';
+			position: absolute;
+			bottom: 0; left: 0; right: 0;
+			height: 1px;
+			background: #8fe5bd;
+		}
+		.people-seti img{
+			width: 24px;
+			padding: 10px 5px 7px 5px;
+		}
+
+
+/*Our Latest Works*/
+
+.works-menu{
+	overflow: hidden;
+	display: block;
+	margin: 0 auto;
+	width: 590px;
+	padding-bottom: 48px;
+}
+	.works-menu ul a li{
+		list-style: none; float: left; margin: 0 18px; padding: 7px 0; text-decoration: none; color: #434243;
+		border-bottom: 1px solid transparent;
+	}
+	.works-menu a:hover li{
+		color: #1dde85; border-bottom: 1px solid #1dde85;
+	}
+		.works-menu .active li{
+			color:#1dde85; border-bottom: 1px solid #1dde85;
+		}
+
+
+	.works-img-row{
+		overflow: hidden;
+		padding-bottom: 52px;
+	}
+		.works-img img{
+			width: 33.33%; float: left;
+		}
+
+/*кнопка*/
+	.btn{
+		display: inline-block;
+		vertical-align: top;
+		padding: 20px 58px;
+		font-size: 18px;
+		text-decoration: none;
+		text-align: center;
+		color: #fffcf4;
+		background: #1dde85;
+		border: none;
+		cursor: pointer;
+	}
+		.btn:hover,
+		.btn:active{
+			background: #38ad76;
+		}
+		.btn:disabled {
+			cursor: default;
+			opacity: .5;
+		}
+			.btn:disabled:hover{
+				background: #ccc;
+			}
+
+
+	.works .btn{
+		display: block;
+		width: 80px;
+		margin: 0 auto;
+	}

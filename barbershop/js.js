@@ -11,11 +11,28 @@ var leftBtn = document.querySelector(".gallery-prev");
 var rightBtn = document.querySelector(".gallery-next");
 var gallery = document.querySelector(".gallery-content");
 
-/*leftBtn.addEventListener("click", leftFunction);
-rightBtn.addEventListener("click", rightFunction);*/
+var galleryImg = document.getElementsByClassName("gallery-img");
+var imgNum = 0;
+
+if(leftBtn) leftBtn.addEventListener("click", leftFunction);
+if(rightBtn) rightBtn.addEventListener("click", rightFunction);
 
 function leftFunction(){
-	
+	if(galleryImg[imgNum - 1]){
+		galleryImg[imgNum].classList.add("show-right");
+		galleryImg[imgNum - 1].classList.remove("show-left");
+		imgNum = imgNum - 1;
+	}
+	else return 0;
+}
+console.log(galleryImg.length);
+function rightFunction(){
+	if(galleryImg[imgNum + 1]){
+		galleryImg[imgNum].classList.add("show-left");
+		galleryImg[imgNum + 1].classList.remove("show-right");
+		imgNum = imgNum + 1;
+	}
+	else return 0;
 }
 
 link.addEventListener("click", openEnterFunction);
@@ -23,9 +40,11 @@ link.addEventListener("click", openEnterFunction);
 for (var i = 0; i < openMap.length; i++) {
 	openMap[i].addEventListener("click", openMapFunction);
 }
+
 for (var i = 0; i < close.length; i++) {
 	close[i].addEventListener("click", closeFunction);
 }
+
 form.addEventListener("submit", function(e){
 	if (!(login.value && password.value)){
 		e.preventDefault();
@@ -72,4 +91,4 @@ window.addEventListener("keydown", function(e){
 });
 
 
-var arrayImg = ["img/picture.png", "img/picture-2.png"];
+/*var arrayImg = ["img/picture.png", "img/picture-2.png"];*/

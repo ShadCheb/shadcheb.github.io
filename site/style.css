@@ -29,7 +29,6 @@ body{
 }
 .koord {
     float: left;
-    height: 30px;
 }
 .koord img{
     display:inline-block;
@@ -38,7 +37,6 @@ body{
 }
 .koord span{
     display:inline-block;
-    vertical-align: middle;
     margin-right: 38px;
 }
 .seti{
@@ -58,26 +56,33 @@ body{
     padding-bottom: 40px;
 }
     .head img{
-        width: 20   0px;
-        padding: 20px 0px;
+        width: 180px;
+        padding: 40px 0 0 0;
     }
     .head h1{
         padding: 26px 0px;
         font-size: 36px;
         color: #b80433;
+        
     }
     .head h2{
         font-size: 18px;
         color: #adadad;
     }
-    .head .button{
+    .button{
         border: 2px solid;
         border-color: #b80433;
         margin-top: 40px;
         padding: 25px 32px;
         font-size: 18px;
         width: 240px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
     }
+        .button:hover{
+            text-decoration: underline;
+        }
 /*меню*/
 .menu-main{
     background: #b80433; width: 100%;
@@ -121,17 +126,31 @@ body{
     overflow: hidden;
 }
     .block{
+        position: relative;
         float: left;
         width: 50%;
         background: #3c3b3b;
     }
     .block img{
         width: 100%;
-        opacity: 0.5;
     }
-    .block:hover{
-        background: #b80433;
+    .block-bcg{
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        padding-top: 40%;
+        background: rgba(60,59,59,0.8);
     }
+    .block-bcg .button{
+        display: none;
+        margin: 0 auto;
+    }
+        .block:hover .button{
+            display: block;
+        } 
+        .block:hover .block-bcg{
+            background: rgba(184,4,51,0.6);
+        }
+        
 /*Цены*/
 .pricing{
     overflow: hidden;
@@ -267,20 +286,30 @@ body{
 /*футер*/
 .footer{
     overflow: hidden;
+    padding: 20px 0;
 }
 .contacts-footer, .navigator-footer, .maps-footer{
     width: 33%; float: left;
 }
-.contacts-footer img, .contacts-footer h1 .contacts-footer p{
+.contacts-footer img, .navigator-footer img{
     float: left;
+    padding: 0 10px 18px 0;
 }
-.navigator-footer img, .navigator-footer h1{
-    float: left;
-} 
-
+.contacts-footer p, .navigator-footer p{
+    clear:both;
+    padding-left: 65px;
+    line-height: 24px;
+}
+.navigator-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+.navigator-footer a:hover{
+    text-decoration: underline;
+}
 
 @media only screen and (min-width: 769px){
     .top, .head, .menu, .program, .pricing, .trainers, .gallery-main, .video, .footer{
-        max-width: 1170px; margin: 0 auto;
+        max-width: 1070px; margin: 0 auto;
     }
 }

@@ -166,6 +166,7 @@
 		height: 260px;
 	}
 		.gallery-content{
+			position: relative;
 			margin: 0;
 			height: 164px;
 			border: 7px solid #fff;
@@ -607,4 +608,23 @@
 .modal-content-show{
 	display: block;
 	animation: bounce 0.6s;
+}
+
+
+
+/*галлерея*/
+.gallery-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.show-right{
+	position: absolute;
+	left: 1000px;
+	display: none;
+}
+.show-left{
+	position: absolute;
+	left: -1000px;
+	display: none;
 }
