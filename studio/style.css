@@ -1,0 +1,1048 @@
+body{
+  	margin: 0;
+  	padding: 0;
+  	background: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+ }
+p, h2, h3{
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+}
+  .courses .container{
+    overflow: hidden;
+  }
+.container-main{
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.discount-block{
+  position: fixed;
+  left: 0;
+  top: 312px;
+  background: #006d6a;
+  width: 38px;
+  height: 188px;
+  text-align: center;
+  background: url(img/discount.png);
+  -webkit-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  -moz-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  -o-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  -ms-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  z-index: 100;
+}
+
+
+.menu-up{
+  position: fixed;
+  width: 100%;
+  background: #006d6a;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  -moz-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  -o-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  -ms-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
+  z-index: 100;
+}
+  .menu-up-logo{
+     float: left;
+     width: 360px;
+     padding: 5px 0 5px 30px;
+     height: 59px;
+     vertical-align: middle;
+     cursor: pointer; 
+  }
+    .menu-up-logo img{
+      float: left;
+      width: 59px;
+      height: 59px;
+      margin-right: 5px;
+    }
+    .menu-up-logo p{
+      display: inline-block;
+    }
+      .menu-up-logo p:nth-child(2) {
+        font-size: 26px;
+        line-height: 28px;
+      }
+      .menu-up-logo p:nth-child(3){
+        font-size: 21px;
+        line-height: 22px;
+      }
+  .menu-up-navigation{
+    float: right;
+  }
+    .menu-up-navigation ul{
+      margin: 0;
+      padding: 0;
+      font-size: 0;
+      list-style: none;
+    }
+    .menu-up-navigation li{
+      display: inline-block;
+      vertical-align: top;
+      font-size: 21px;
+      line-height: 25px;
+    }
+    .menu-up-navigation a{
+      display: block;
+      padding: 22px 20px;
+      text-decoration: none;
+      color: #fff;
+      -webkit-transition: 1s ease-in-out;
+      -o-transition: 1s ease-in-out;
+      -moz-transition: 1s ease-in-out;
+      transition: .4s ease-in-out;
+    }
+      .menu-up-navigation a:hover{
+        background: #004846;
+        color: #5abbb8;
+      }
+
+.header-slide{
+  position: relative;
+  width: 100%;
+  height: 677px;
+  padding-top: 58px;
+  overflow: hidden;
+}
+  .header-slide>ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4320px;  /*ширина всех слайдов*/
+    height: 736px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: left 1s ease-in-out;
+  }
+    .header-slide>ul>li{
+      float: left;
+      width: 33.33%;
+      height: 100%;
+    }
+      .header-slide .slide_1{
+        background: url(img/slide_1.jpg) no-repeat center;
+      }
+      .header-slide .slide_2{
+        background: url(img/slide_1.jpg) no-repeat center;
+      }
+      .header-slide .slide_3{
+        background: url(img/slide_1.jpg) no-repeat center;
+      }
+    .header-slide-text{
+      color: #fff;
+      margin-top: 250px;
+      margin-left: 196px;
+      width: 400px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+      .header-slide-text h2{
+        font-size: 37px;
+        line-height: 44px;
+      }
+      .header-slide-text p{
+        font-size: 21px;
+        line-height: 25px;
+      }
+      .line-h2{
+        height: 3px;
+        width: 164px;
+        background: #fff;
+        margin: 35px auto;
+      }
+
+  .header-slide-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .header-slide-btn{
+    position: absolute;
+    top: 338px;
+    margin-top: -37px;
+    color: #fff;
+    font-size: 74px;
+    line-height: 74px;
+    cursor: pointer;
+  }
+
+  .btn-entry-up{
+    position: absolute;
+    bottom: -68px;
+    left: 50%;
+    margin-left: -66px;
+    width: 132px;
+    height: 132px;
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    background: #006d6a;
+    z-index: 10;
+    cursor: pointer;
+  }
+    .btn-entry-up::before{
+      content:'Записаться';
+      display: block;
+      text-transform: uppercase;
+      color:#fff;
+      width: 100%;
+      height: 47px;
+      padding-top:85px;
+      text-align: center;
+      background: url(img/galka.png) no-repeat scroll 43px 20px;
+      -webkit-transform: rotate(4deg);
+      -moz-transform: rotate(4deg);
+      -o-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
+      transform: rotate(4deg);
+    }
+      .btn-entry-up:hover{
+        background: #004846;
+        transition: 0.3s ease-in-out;
+      }
+      .btn-entry-up:hover::before{
+        opacity: 0.8;
+        transition: 0.3s ease-in-out;
+      }
+  .btn-entry-down{
+    position: absolute;
+    bottom: -68px;
+    left: 50%;
+    margin-left: -66px;
+    width: 132px;
+    height: 132px;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+    background: #26c9c4;
+    z-index: 5;
+  }
+
+
+/*Курсы*/
+.courses{
+  position: relative;
+  width: 100%;
+  background: url(img/backgrond_1_litle.png);
+  padding-top: 110px;
+  padding-bottom: 100px;
+}
+  .courses-menu{
+    width: 650px;
+    height: 65px;
+    margin: 0 auto;
+  }
+  .courses-menu>ul{
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+    .courses-menu>ul>li{
+      position: relative;
+      color: #000;
+      text-transform: uppercase;
+      float: left;
+      padding: 5px 30px;
+      font-size: 22px;
+      line-height: 26px;
+      cursor: pointer;
+    }
+      .courses-menu>ul>li::after{
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 30px;
+        right: 30px;
+        height: 2px;
+        background: #006d6a;
+        visibility: hidden;
+      }
+      .courses-menu>ul>li.courses-active::after{
+        visibility: visible;
+      }
+        .courses-menu>ul>li:hover::after{
+          visibility: visible;
+        }
+
+.courses-content-main{
+  width: 100%;
+  padding: 0 53px;
+}
+.courses-content{
+  float: left;
+  width: 310px;
+  height: 407px;
+  margin: 0 30px;
+  margin-bottom: 27px;
+  perspective: 2000px;
+}
+  .courses-content:hover .courses-content-rotate{
+    transform:  rotateY(180deg);
+  }
+
+  .courses-content-img, .courses-content-text{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;  /*когда объект перевернут - будет скрываться*/
+  }
+
+  .courses-content-rotate{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: 0.5s;
+  }
+  .courses-content-img{
+    overflow: hidden;
+  }
+  .course-nophoto{
+    background: url(img/default.jpg) no-repeat center;
+    overflow: hidden;
+  }
+    .courses-content-area{
+      position: absolute;
+      bottom: 16px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+    .courses-content-h2{
+      text-align: center;
+      padding: 0 8px;
+    }
+      .courses-content-h2 h2{
+        font-size: 23px;
+        line-height: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 11px;
+      }
+      .line-h2-litle{
+        display: block;
+        width: 195px;
+        height: 2px;
+        background: #fff;
+        margin: 0 auto;
+        margin-bottom: 5px;
+      }
+    .courses-content-durability{
+      position: relative;
+      background: url(img/clock.png) no-repeat 24px 0;
+      float: left;
+      width: 48.8%;
+      margin-top: 7px;
+    }
+      .courses-content-durability p, .courses-content-price p{
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        margin-left: 56px;
+      }
+      .courses-content-durability::after{
+        content: '';
+        position: absolute;
+        width: 2px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+      }
+    .courses-content-price{
+      position: relative;
+      background: url(img/monney.png) no-repeat 24px 0;
+      float: left;
+      width: 51.2%;
+      margin-top: 7px;
+    }
+
+  .courses-content-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background: url(img/bcg-service.png) no-repeat center;
+  }
+    .courses-content-text .courses-content-h2{
+      margin-top: 40px;
+    }
+    .courses-content-intended{
+      padding: 18px 0 22px 0;
+      text-align: center;
+    }
+      .courses-content-intended p{
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+      }
+    .courses-content-description{
+      text-align: center;
+      padding: 0 52px;
+      height: 185px;
+      overflow: hidden;
+    }
+      .courses-content-description p{
+        font-size: 15px;
+        line-height: 18px;
+      }
+    .courses-content-btn{
+      position: absolute;
+      bottom: 27px;
+      left: 50%;
+      width: 123px;
+      height: 23px;
+      background: #fff;
+      margin-left: -61px;
+      text-align: center;
+      cursor: pointer;
+    }
+      .courses-content-btn p{
+        color: #006d6a;
+        font-size: 16px;
+        line-height: 23px;
+      }
+.courses .btn-entry-up, .courses .btn-entry-down{
+  bottom: -120px;
+}
+
+.advantages{
+  position: relative;
+  width: 100%;
+  background: url(img/backgrond_1_litle.png);
+}
+  .advantages-bgr{
+    width: 100%;
+    background: url(img/backgrond_2.png) no-repeat center top;
+    padding-top: 195px;
+    padding-bottom: 275px;
+  }
+.caption{
+  color: #fff;
+  text-align: center;
+  margin-bottom: 24px;
+}
+  .caption h2{
+    font-size: 55px;
+    line-height: 66px;
+  }
+
+  .advantages-area{
+    position: relative;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 20px;
+    padding: 55px 55px;
+    overflow: hidden;
+  }
+    .advantages-area::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 640px;
+      height: 5px;
+      background: url(img/blick.png) no-repeat center;
+    }
+    .advantages-area::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 640px;
+      height: 5px;
+      background: url(img/blick.png) no-repeat center;
+    }
+    .advantages-area-border{
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.26);
+      border-radius: 14px;
+    }
+
+  .advantages-column{
+    float: left;
+    width: 48%;
+  }
+  .advantages-area > .advantages-column{
+    padding-right: 4%;
+  }
+  .advantages-area > .advantages-column ~ .advantages-column{
+    padding-right: 0;
+  }
+
+  .advantages-cell{
+    padding-bottom: 52px;
+  }
+    .advantages-cell h3, .advantages-cell p{
+      margin-left: 156px;
+    }
+    .advantages-cell h3{
+      font-size: 26px;
+      line-height: 26px;
+      padding-bottom: 18px;
+    }
+    .advantages-cell p{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    .advantages-cell:nth-child(1){
+      height: 140px;
+    }
+    .advantages-cell:nth-child(2){
+      height: 180px;
+    }
+    .advantages-cell:nth-child(3){
+      height: 200px;
+    }
+    .advantages-cell:nth-child(4){
+      height: 174px;
+    }
+      .adv-certificate{
+        background: url(img/plus_1.png) no-repeat 0 4px;
+      }
+      .adv-support{
+        background: url(img/plus_2.png) no-repeat 0 4px;
+      }
+      .adv-individuality{
+        background: url(img/plus_3.png) no-repeat 0 4px;
+      }
+      .adv-attraction{
+        background: url(img/plus_4.png) no-repeat 0 4px;
+      }
+      .adv-materials{
+        background: url(img/plus_5.png) no-repeat 0 4px;
+      }
+      .adv-advice{
+        background: url(img/plus_6.png) no-repeat 0 4px;
+      }
+      .adv-practice{
+        background: url(img/plus_7.png) no-repeat 0 4px;
+      }
+      .adv-notebook{
+        background: url(img/plus_8.png) no-repeat 0 4px;
+      }
+  .advantages .btn-entry-up, .advantages .btn-entry-down{
+    bottom: 64px;
+  }
+
+
+.services{
+  width: 100%;
+  background: url(img/backgrond_1_litle.png);
+}
+  .services .caption{
+    color: #000;
+  }
+
+  .services-area{
+    width: 1048px;
+    margin:  0 auto;
+    padding-top: 26px;
+  }
+  .services-service.services-down{
+    margin-top: 142px;
+  }
+    .services-service{
+      position: relative;
+      float: left;
+      width: 250px;
+      height: 680px;
+      margin: 0 6px;
+    }
+    .service-shadow{
+      position: absolute;
+      top: -10px;
+      left: -49px;
+      width: 346px;
+      height: 590px;
+      background: url(img/service-shadow.png) no-repeat 0 0;
+      z-index: 0;
+    }
+    .service-text{
+      position: absolute;
+      top: 0;
+      left: 42px;
+      width: 164px;
+      height: 284px;
+      background: url(img/bcg-service-3.png) no-repeat center;
+      position: relative;
+      z-index: 2;
+    }
+      .service-text-1, .service-text-2{
+        position: absolute;
+        top: 0;
+        left: 42px;
+        background: transparent;
+        width: 164px;
+        height: 284px;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .service-text-1{
+        transform: rotate(-60deg);
+      }
+      .service-text-2{
+          transform: rotate(60deg);
+      }
+          .service-text-1::after, .service-text-2::after{
+              content: '';
+              position: absolute;
+              width: 328px;
+              height: 284px;
+              top: 0;
+              left: -82px;
+              background: url(img/bcg-service-3.png) no-repeat center;
+          }
+              .service-text-1::after{
+                  transform: rotate(60deg);
+              }
+              .service-text-2::after{
+                  transform: rotate(-60deg);
+              }
+    .service-img{
+      position: absolute;
+      top: 0;
+      left: 42px;
+      width: 164px;
+      height: 284px;
+      background: url(img/bcg-service-2.png) no-repeat center;
+      position: relative;
+      z-index: 2;
+    }
+      .service-img-1, .service-img-2{
+        position: absolute;
+        top: 284px;
+        left: 42px;
+        background: transparent;
+        width: 164px;
+        height: 284px;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .service-img-1{
+        transform: rotate(-60deg);
+      }
+      .service-img-2{
+          transform: rotate(60deg);
+      }
+          .service-img-1::after, .service-img-2::after{
+              content: '';
+              position: absolute;
+              width: 328px;
+              height: 284px;
+              top: 0;
+              left: -82px;
+              background: url(img/bcg-service-2.png) no-repeat center;
+          }
+              .service-img-1::after{
+                  transform: rotate(60deg);
+              }
+              .service-img-2::after{
+                  transform: rotate(-60deg);
+              }
+  .services-service.services-down .service-text-1,
+  .services-service.services-down .service-text-2{
+    top: 284px;
+  }
+  .services-service.services-down .service-img-1,
+  .services-service.services-down .service-img-2{
+    top: 0;
+  }
+
+    .service-text-3{
+      position: absolute;
+      top: 104px;
+      left: 25px;
+      right: 25px;
+      z-index: 3;
+      text-align: center;
+    }
+    .services-service.services-down .service-text-3{
+      top: 388px;
+    }
+      .service-text-3 h3{
+        font-size: 21px;
+        line-height: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 18px;
+      }
+      .service-btn{
+        position: relative;
+        background: transparent;
+        border: none;
+        font-size: 21px;
+        line-height: 26px;
+        color: #17a09e;
+        cursor: pointer;
+      }
+        .service-btn::before{
+          content: '';
+          display: none;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #17a09e;
+        }
+        .service-btn:after{
+          content: '';
+          display: none;
+          position: absolute;
+          bottom: -24px;
+          left: 52px;
+          width: 29px;
+          height: 8px;
+          background: url(img/arrow.png) no-repeat center;
+        }
+        .service-btn:hover::before, .service-btn:hover::after{
+          display: block;
+        }
+    .service-img-3{
+      position: absolute;
+      top: 284px;
+      left: 0;
+      width: 250px;
+      height: 284px;
+      z-index: 3;
+      text-align: center;
+    }
+    .services-service.services-down .service-img-3{
+      top: 0;
+    }
+      .service-tool-1{
+        background: url(img/tool_1.png) no-repeat center;
+      }
+      .service-tool-2{
+        background: url(img/tool_2.png) no-repeat center;
+      }
+      .service-tool-3{
+        background: url(img/tool_3.png) no-repeat center;
+      }
+      .service-tool-4{
+        background: url(img/tool_4.png) no-repeat center;
+      }
+
+
+
+
+.about-us{
+  background: url(img/backgrond_1_litle.png);
+  width: 100%;
+}
+.advantages-bgr-2{
+  background: url(img/backgrond_3.png) no-repeat ;
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 232px;
+  height: 689px;
+}
+.about-us-arena{
+  position: relative;
+  padding: 0 67px;
+}
+  .about-us-btn{
+    position: absolute;
+    top: 284px;
+    color: #fff;
+    font-size: 74px;
+    line-height: 74px;
+    cursor: pointer;
+}
+    .left{
+      left: 0;
+    }
+    .right{
+      right: 0;
+    }
+  .about-us-arena .advantages-area{
+    height: 424px;
+  }
+    .about-us-block-arena{
+      position: relative;
+      }
+    .about-us-block-list{
+      position:  absolute;
+      top: 0;
+      left: 0;
+      width: 2072px;
+      transition: left 1s ease-in-out;
+    }
+    .about-us-block{
+      float: left;
+      width: 926px;
+      padding-bottom: 40px; 
+      margin-right: 110px;
+    }
+      .abot-us-block-img{
+        position: relative;
+        float: left;
+        height: 386px;
+        width: 254px;
+        margin-right: 33px;
+      }
+        .about-us-author-1{
+          background: url(img/author-1.png) no-repeat center bottom;
+          background-size: 95%; 
+        }
+        .abot-us-block-author{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 252px;
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 39px;
+          color: #000;
+          text-transform: uppercase;
+          text-align: center;
+          background: url(img/bcg-author.png) no-repeat center;
+          border-radius: 20px;
+          -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+          -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+          -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+          -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+          box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+        }
+      .abot-us-block-text{
+        float: left;
+        width: 600px;
+      }
+        .about-us-author{
+          margin-bottom: 23px;
+        }
+          .abot-us-specialization, .abot-us-direction{
+            float: left;
+            font-size: 19px;
+            line-height: 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0 16px;
+            border: 2px solid #fff;
+            margin-right: 5px;
+          }
+            .abot-us-specialization{
+              border-radius: 20px 0 0 20px;
+              color: #000; 
+              background: url(img/bcg-author.png) no-repeat center;
+              -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+              -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+              -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+              -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+              box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+            }
+            .abot-us-direction{
+              color: #fff;
+            }
+            .abot-us-direction:last-child{
+              border-radius: 0 20px 20px 0;
+            }
+        .about-us-text{
+          width: 100%;
+          font-size: 18px;
+          line-height: 27px;
+          color: #fff;
+        }
+
+
+.reviews{
+  position: relative;
+  background: url(img/backgrond_1_litle.png);
+  margin- top: -42px;
+}
+  .reviews .caption{
+    position: absolute;
+    top: -42px;
+    left: 0;
+    right: 0;
+    color: #000;
+  }
+
+  .reviews-arena{
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+    .reviews-block{
+      float: left;
+      width: 21%;
+      margin: 0 2%;
+      padding-top: 105px;
+    }
+      .reviews-block-img{
+        width: 160px;
+        height: 160px;
+        background: #26c9c4;
+        margin: 0 auto;
+        margin-bottom: 62px;
+        transform: rotate(48deg);
+      }
+      .reviews-img-before{
+        position: relative;
+        width: 152px;
+        height: 152px;
+        border: 4px solid #006d6a; 
+        margin: 0 auto;
+        transform: rotate(-6deg);
+        overflow: hidden;
+      }
+        .reviews-img-before::after{
+          content: '';
+          position: absolute;
+          top: -25%;
+          left: -25%;
+          width: 150%;
+          height: 150%;
+          background: url(img/reviews_1.jpg) no-repeat center;
+          background-size: 110%;
+          transform: rotate(-42deg);
+        }
+      .reviews-block-head{
+        position: relative;
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+        .reviews-block-head p{
+          font-size: 18px;
+          line-height: 36px;
+        }
+        .reviews-block-head::after{
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 15px;
+          right: 15px;
+          height: 3px;
+          background: url(img/bcg-line.jpg);
+        }
+      .reviews-block-text{
+        padding: 0 20px;
+        color: #000;
+        text-align: left;
+      }
+        .reviews-block-text p{
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+
+.contacts{
+  width: 100%;
+  background: #006d6a;
+  padding-top: 70px; 
+}
+.contacts-map{
+  position: relative;
+  background: url(img/maps.jpg) no-repeat center;
+  width: 100%;
+  height: 530px;
+}
+  .contacts-map-text{
+    position: absolute;
+    right: 273px;
+    top: 93px;
+    width: 470px;
+    height: 304px;
+    text-align: center;
+    background: rgba(0,109,106,0.8);
+    padding: 10px;
+    border-radius: 20px;
+  }
+    .map-text-border{
+      border: 2px solid rgba(255,255,255,0.8); 
+      border-radius: 15px;
+    }
+      .map-text-border p{
+        display: block;
+        color: #fff;
+        font-size: 24px;
+        line-height: 32px;
+        width: 325px;
+        margin:0 auto;
+      }
+      .map-text-border p:nth-child(1){
+        margin-bottom: 21px;
+      }
+      .map-text-border p:nth-child(3){
+        font-size: 34px;
+        line-height: 21px;
+      }
+      .map-text-border p:nth-child(4){
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 44px;
+        padding-top: 14px;
+        padding-bottom: 10px;
+      }
+
+footer{
+  background: #006d6a;
+  padding-bottom: 20px;
+}
+  .footer-block{
+    color: #fff;
+    width: 748px;
+    margin: 0 auto;
+    padding-top: 20px 
+
+  }
+    .footer-block p{
+      display: block;
+      float: left;
+      font-size: 20px;
+      line-height: 24px;
+      color: #fff;
+      padding-top: 5px;
+      margin-right: 12px;
+    }
+    .footer-block-seti{
+      float: left;
+      display: block;
+      width: 45px;
+      height: 28px;
+      transition: 0.3s ease-in-out;
+      margin-right: 10px;
+    }
+      .footer-block-seti:hover{
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      .seti-vk{
+        background: url(img/vk.png) no-repeat center;
+      }
+      .seti-i{
+        background: url(img/inst.png) no-repeat center;
+      }
+                  

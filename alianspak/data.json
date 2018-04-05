@@ -1,0 +1,37 @@
+[{
+  "category": "meat",
+  "img": "img/meat/vakuumnye-pakety-228x228.jpg",
+  "name": "Вакуумные Пакеты",
+  "price": "110"
+},
+{
+  "category": "meat",
+  "img": "img/meat/barier-flow-pack-228x228.jpg",
+  "name": "Барьерная Термоусадочная Флоу - Пак Пленка",
+  "price": "100"
+},
+{
+  "category": "meat",
+  "img": "img/meat/nijnya-plenka-228x228.jpg",
+  "name": "НижняяПленка Для Термоформирования",
+  "price": "80"
+},
+{
+  "category": "meat",
+  "img": "img/meat/cook-in-bag-228x228.jpg",
+  "name": "Пакеты Cook-In-Bag",
+  "price": "120"
+},
+{
+  "category": "meat",
+  "img": "img/meat/plenka-dlya-zapajki-lotkov-228x228.jpg",
+  "name": "Пленка Для Запайки Лотков",
+  "price": "90"
+},
+{
+  "category": "meat",
+  "img": "img/meat/termo-bar-pak-228x228.jpg",
+  "name": "ТермоусадочныеБарьерные Пакеты",
+  "price": "190"
+}
+]

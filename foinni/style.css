@@ -5,14 +5,31 @@ img{
     border: none;
 }
 .karkas{
-	margin: 0; padding: 0; background: #fff;
+	position: relative;
+	margin: 0 auto; padding: 0; background: #fff;
+	max-width: 1600px;
 }
+
+.karkas:after{
+	content: '';
+	position: absolute;
+	top: 120px;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid #8f8e91;
+}
+
+.content-list{
+	max-width: 940px;
+	min-width: 880px;
+	margin: 0 auto;
+	padding: 0 5px;
+}
+
 .header-pic{
 	background-image: url(img/head.png); color: #fff; padding-bottom: 245px;
 }
-.top-menu-main{
-	border-bottom: 1px solid #8f8e91;
-}
+
 .top-menu{
 	overflow: hidden; 
 }
@@ -157,12 +174,12 @@ img{
 		}
 		.people-seti{
 			position: relative;
-			padding-top: 80px;
+			padding-top: 30px;
 		}
 		.people-seti:after{
 			content: '';
 			position: absolute;
-			top: 80px; left: 0; right: 0;
+			top: 30px; left: 0; right: 0;
 			height: 1px;
 			background: #8fe5bd;
 		}
@@ -239,3 +256,227 @@ img{
 		width: 80px;
 		margin: 0 auto;
 	}
+
+
+/*Our Pricing Plans*/
+
+.plans{
+	overflow: hidden;
+}
+.plans-block-main{
+	float: left;
+	width: 25%;
+}
+	.plans-block-main h3{
+		text-align: center;
+		color: #8f8e91;
+		font-size: 14px;
+		padding-bottom: 20px;
+	}
+	.plans-block{
+		display: block;
+		width: 92%;
+		margin: 0 auto;
+		padding-bottom: 30px;
+		border: 1px solid transparent;
+	}
+	.plans-block-price{
+		position: relative;
+		margin: 0 auto;
+		border: 1px solid #8f8e91;
+		padding: 20px 0;
+	}
+	.plans-block-price p{
+		text-align: center;
+		color: #8f8e91;
+		padding: 0;
+		margin: 0;
+	}
+	.plans-block-price p span{
+		font-size: 26px;
+		font-weight: 700;
+		color: #454546;
+	}
+	.doll{
+		position: absolute;
+		top: 10px;
+		left: 32%;
+		font-size: 21px;
+	}
+	.plans-block-main:nth-child(5) .doll{
+		position: absolute;
+		left: 29%;
+	}
+	p.doll{
+		color: #454546;
+	}
+	.plans-block ul{
+		padding: 26px 0 45px 0;
+		margin: 0;
+	}
+	.plans-block ul li{
+		list-style: none;
+		text-align: center;
+		font-size: 16px;
+		line-height: 40px;
+		color: #8f8e91;
+	}
+	.plans-block .btn{
+		display: block;
+		width: 100px;
+		margin: 0 auto;
+		padding: 20px 30px;
+		background: transparent;
+		color: #454546;
+		border: 1px solid #454546;
+	}
+		.plans-block-main:hover .plans-block{
+			border: 1px solid #1dde85;
+		}
+		.plans-block-main:hover h3{
+			color: #1dde85
+		}
+		.plans-block-main:hover p{
+			color: #fff;
+		}
+		.plans-block-main:hover span{
+			color: #fff;
+		}
+		.plans-block-main:hover .plans-block-price{
+			background: #1dde85;
+			border: 1px solid #1dde85;
+		}
+		.plans-block-main:hover .btn{
+			background: #1dde85;
+			color: #fff;
+			border: 1px solid #1dde85;
+		}
+
+
+/*Say Hi*/
+.say{
+	background: url(img/background-iphone.png) center no-repeat;
+}
+.say .caption h2{
+	color: #fff;
+	padding: 40px 0 25px 0;
+	margin: 0;
+}
+form.say-form{
+	overflow: hidden;
+	display: block;
+	width: 92%;
+	margin: 0 auto;
+}
+.say-form input, textarea{
+	background: transparent;
+	border: 1px solid #fff;
+	width: 48%;
+	float: left;
+	margin: 10px 1%; 
+	padding: 12px;
+	color: #fff;
+}
+textarea{
+	resize: none;
+	width: 98%;
+	height: 150px;
+	vertical-align: top;
+	margin-bottom: 30px;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+.say-form .btn{
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+
+/*footer*/
+
+.footer{
+	overflow: hidden;
+	background: #0b0a0a;
+	padding: 40px 0;
+}
+	.footer-block{
+		overflow: hidden;
+		float: left;
+		width: 33.33%;
+		color: #454546;
+	}
+		.footer-block h3{
+			clear: both;
+			padding: 10px 0;
+			margin: 0;
+			color: #fff;
+		}
+		.footer-block p{
+			font-size: 14px;
+			line-height: 30px;
+			font-weight: 100;
+			width: 70%;
+		}
+
+		.footer-block ul{
+			float: left;
+			padding: 0;
+			margin: 0;
+			padding-right: 30px;
+		}
+		.footer-block li{
+			list-style: none;
+
+		}
+			.footer-block li a{
+				text-decoration: none;
+				color: #454546;
+				font-size: 14px;
+				line-height: 32px;
+				font-weight: 100;
+			}
+			.footer-block li a:hover{
+				color: #fff;
+			}
+
+		.footer-block input{
+			width: 65%;
+			background: transparent;
+			border: 1px solid #454546;
+			padding: 12px;
+			color: #fff;
+			margin-bottom: 15px;
+		}
+
+		.btn-facebook, .btn-twetter, .btn-google, .btn-in{
+			display: block;
+			float: left;
+			width: 40px;
+			height: 40px;
+			border: 2px solid #454546;
+			margin-right: 10px;
+		}
+		.btn-facebook:hover, .btn-twetter:hover, .btn-google:hover, .btn-in:hover{
+			border: 2px solid #fff;
+			cursor: pointer;
+		}
+		.btn-facebook{
+			background: url(img/facebook-footer.png) center center no-repeat;
+		}
+		.btn-twetter{
+			background: url(img/twetter-footer.png) center center no-repeat;
+		}
+		.btn-google{
+			background: url(img/google+-footer.png) center center no-repeat;
+		}
+		.btn-in{
+			background: url(img/linkedin-footer.png) center center no-repeat;
+		}
+
+		.footer-block .btn{
+			display: block;
+			padding: 10px;
+			width: 150px;
+		}
