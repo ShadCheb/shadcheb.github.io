@@ -127,7 +127,7 @@
 						<div class="courses-content-h2"><h2></h2><div class="line-h2-litle"></div></div>
 						<div class="courses-content-intended"><p></p></div>
 						<div class="courses-content-description"><p></p></div>
-						<div class="courses-content-btn"><p>Записаться</p></div>					
+						<div class="courses-content-btn" onclick="popupOpenForm()"><p>Записаться</p></div>					
 					</div>
 				</div>
 			</div>
@@ -253,7 +253,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Наращивание ресниц</h3>
-					<button class="service-btn">Узнать цены</button>
+					<button class="service-btn" data-id="services-1">Узнать цены</button>
 				</div>
 				
 				<div class="service-img"></div>
@@ -275,7 +275,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Перманентный макияж</h3>
-					<button class="service-btn">Узнать цены</button>
+					<button class="service-btn" data-id="services-2">Узнать цены</button>
 				</div>
 			</div>
 
@@ -286,7 +286,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Удаление татуажа</h3>
-					<button class="service-btn">Узнать цены</button>
+					<button class="service-btn" data-id="services-3">Узнать цены</button>
 				</div>
 				
 				<div class="service-img"></div>
@@ -308,7 +308,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Депиляция шугаринг</h3>
-					<button class="service-btn">Узнать цены</button>
+					<button class="service-btn" data-id="services-4">Узнать цены</button>
 				</div>
 			</div>
 
@@ -533,23 +533,147 @@
 </footer>
 
 
-<div class="modal-content">
+<div class="modal-content-discount">
+	<div class="modal-content-close">
+		Закрыть
+	</div>
+	
+	<div class="caption">
+		<h2>Акции</h2>
+	</div>
+	<div class="stock">
+		
+		<div class="stock-name">
+			<p>Наращивание ресниц + перманентный макияж губ</p>
+		</div>
+		<div class="stock-date">
+			<p>c 07.07.2017 по 08.08.2018</p>
+		</div>
+		<div class="stock-price">
+			<div class="stock-price-old"><p>1000 р.</p></div>
+			<div class="stock-price-new"><p>800 р.</p></div>
+		</div>
+
+	</div>
+	<div class="stock">
+		
+		<div class="stock-name">
+			<p>Наращивание ресниц + перманентный макияж губ</p>
+		</div>
+		<div class="stock-date">
+			<p>c 07.07.2017 по 08.08.2018</p>
+		</div>
+		<div class="stock-price">
+			<div class="stock-price-old"><p>1000 р.</p></div>
+			<div class="stock-price-new"><p>800 р.</p></div>
+		</div>
+
+	</div>
+	
+</div>
+
+
+<div class="modal-content-pricelist">
 	<div class="modal-content-close">
 		Закрыть
 	</div>
 
-	<h2 class="modal-content-title">Личный кабинет</h2>
-	<p>Введите пожалуйста свой логин и пароль.</p>
-	<form class="login-form" action="/echo" method="post">
-		<input type="text" class="icon-user" name="login" placeholder="Логин" required>
-		<input type="password" class="icon-password" name="password" placeholder="Пароль" required>
-		<input type="checkbox" name="remember" id="remember-me">
-		<label for="remember-me">Запомните меня</label>
-		<a href="#0" class="restore">Я забыл пароль!</a>
-		<button type="submit" class="btn">Войти</button>
-	</form>
+	<div class="caption">
+		<h2>Прайс-лист</h2>
+	</div>
+
+	<div class="services-block">
+		<div class="sercices-block-caption" data-id="services-1">
+			<p>Наращивание ресниц</p>
+		</div>
+		<div class="sercices-block-list">
+			<div class="services-block-elem">
+				<div class="services-elem-service">
+					<p>Классическое</p>
+				</div>
+				<div class="services-elem-ellipsis"></div>
+				<div class="services-elem-btn">
+					Записаться
+				</div>
+				<div class="services-elem-price">
+					<p>2700</p>
+				</div>
+			</div>
+
+			<div class="services-block-elem">
+				<div class="services-elem-service">
+					<p>Двойной объем</p>
+				</div>
+				<div class="services-elem-ellipsis"></div>
+				<div class="services-elem-btn">
+					Записаться
+				</div>
+				<div class="services-elem-price">
+					<p>3000</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="services-block">
+		<div class="sercices-block-caption" data-id="services-2">
+			<p>Перманентный макияж</p>
+		</div>
+		<div class="sercices-block-list">
+			<div class="services-block-elem">
+				<div class="services-elem-service">
+					<p>Перманентный макияж глаз - стрелки</p>
+				</div>
+				<div class="services-elem-ellipsis"></div>
+				<div class="services-elem-btn">
+					Записаться
+				</div>
+				<div class="services-elem-price">
+					<p>10000</p>
+				</div>
+			</div>
+
+			<div class="services-block-elem">
+				<div class="services-elem-service">
+					<p>Перманентный макияж губ</p>
+				</div>
+				<div class="services-elem-ellipsis"></div>
+				<div class="services-elem-btn">
+					Записаться
+				</div>
+				<div class="services-elem-price">
+					<p>10000</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
+
+<div class="modal-content-form">
+	<div class="modal-content-close">
+		Закрыть
+	</div>
+
+	<div class="caption">
+		<h2>Запись</h2>
+	</div>
+	<div class="clarification-caption">Заполните форму и мы с Вами обязательно свяжимся для подтверждения записи</div>
+	
+	<form action="/echo" method="post">
+		<input type="text" class="client-name" name="name" placeholder="Имя" required>
+		<input type="text" class="client-phone" name="phone" placeholder="Номер телефона" required>
+		<input type="text" class="client-mail" name="email" placeholder="Электронная почта">
+		<input type="date" name="date" value="" placeholder="Дата">
+		<input type="time" name="time" value="" placeholder="Время">
+
+		<button type="submit" class="btn-forum">Отправить</button>
+	<form>
+
+</div>
+
+<div class="overlay"></div>
 
 <script src="js.js"></script>
 

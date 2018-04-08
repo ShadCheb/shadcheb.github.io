@@ -22,7 +22,6 @@ var slideArray = {
 	}
 };
 
-//(slideArray.mainSlid.arena, slideArray.mainSlid.leftBtn, slideArray.mainSlid.rightBtn)
 var event = new Event('ckick');
 
 slideArray['header-slide-content'].right.addEventListener('click', nextSlide);
@@ -48,7 +47,7 @@ function autoClick(){
 }
 
 
-setInterval(autoClick, 2000);
+//setInterval(autoClick, 2000);
 
 if(parseInt(slideArray['header-slide-content'].arena.dataset.current) == 0) slideArray['header-slide-content'].left.style.display = 'none';
 if(parseInt(slideArray['about-us-arena'].arena.dataset.current) == 0) slideArray['about-us-arena'].left.style.display = 'none';
@@ -118,8 +117,7 @@ function selectedFilter(event){
 	}
 	filter = filterConformity[target.classList[0]];
 
-	console.log(filter);
-
+	
     for (var i = 0; i < coursesFilter.length; i++) {
         coursesFilter[i].classList.remove('courses-active');
     }
@@ -257,12 +255,155 @@ for(var i = 0; i < menuUpNavigation.length; i++){
 
 /*Ссылка с логотипа на сайт*/
 document.querySelector('.menu-up-logo').addEventListener('click', function(){
+	e.preventDefault();
 	location.href = 'index.html';
 });
 
 
 
+/*Хочу скидку*/
 
 
 
+var discountBtn = document.querySelector('.discount-block');
+var discountContent = document.querySelector('.modal-content-discount'); //Окно ПопАп Хочу скидку
+
+var close = document.getElementsByClassName('modal-content-close');
+
+var pricelistBtn = document.getElementsByClassName('service-btn'); //Кнопка Узнать цены
+var pricelistContent = document.querySelector('.modal-content-pricelist'); //Окно ПопАп Прайс лист
+
+var servicesCaption = document.getElementsByClassName('sercices-block-caption'); //Кнопка заголовок услуги в ПопАп Прайс Лист
+var sercicesList = document.getElementsByClassName('sercices-block-list'); //
+
+var recordingBtn = document.getElementsByClassName('btn-entry-up'); //Кнопка для появления формы
+var recordingBtnn = document.getElementsByClassName('courses-content-btn');
+var recordingContent = document.querySelector('.modal-content-form'); //Окно Попап Форма записи
+
+var overlay = document.querySelector('.overlay');
+
+
+
+//Объект содержащий ссылки на попап окна, в зависимости от нажатой кнопки
+var popUpWindowArray = {
+	'service-btn': pricelistContent,
+	'discount-block': discountContent,
+	'btn-entry-up': recordingContent
+}
+//Объект содержащий ссылки на попап окна, в зависимости от нажатой кнопки Закрыть
+var popUpWindowClosedArray = {
+	'modal-content-pricelist': pricelistContent,
+	'modal-content-discount': discountContent,
+	'modal-content-form': recordingContent
+}
+
+
+discountBtn.addEventListener('click', popupOpenFunction); //Обработчик кнопки Хочу скидку
+
+
+
+
+//Обработчик закрытияна каждую кнопку
+for (var i = 0; i < close.length; i++) {
+	close[i].addEventListener('click', closeFunction);
+}
+//Обработчик на кнопки вызова формы для записи
+for (var i = 0; i < recordingBtn.length; i++) {
+	recordingBtn[i].addEventListener('click', popupOpenFunction);
+}
+
+
+function backgroundBlocker(event){
+	if(event == 'open'){
+		overlay.style.display = 'block';
+		document.body.style.overflow = 'hidden';
+	}
+	else if(event == 'closed'){
+		overlay.style.display = 'none';
+		document.body.style.overflow = 'auto';
+	}
+}
+
+function popupOpenForm(){
+	recordingContent.classList.add('modal-content-show');
+	backgroundBlocker('open');
+}
+
+
+function popupOpenFunction(e){
+	e.preventDefault();
+	var popUpWindow = popUpWindowArray[e.target.classList[0]];
+	popUpWindow.classList.add('modal-content-show');
+			/*Проверка принадлежит ли нажатая кнопка вызовуПопАпокнаспрайс листом*/
+	if(e.target.classList[0] == 'service-btn') serviceChoice(e.target.getAttribute('data-id'));
+	backgroundBlocker('open');
+
+}
+
+function closeFunction(e){
+	e.preventDefault();
+	var popUpWindowClosed = popUpWindowClosedArray[e.target.parentElement.classList[0]];
+	popUpWindowClosed.classList.remove("modal-content-show");
+	backgroundBlocker('closed');
+}
+
+window.addEventListener('keydown', function(e){
+	if (e.keyCode === 27) {
+		discountContent.classList.remove("modal-content-show");
+		pricelistContent.classList.remove("modal-content-show");
+		recordingContent.classList.remove("modal-content-show");
+		backgroundBlocker('closed');
+	}
+});
+
+
+/*Прайс-лист*/
+
+for(var i = 0; i < pricelistBtn.length; i++){
+    pricelistBtn[i].addEventListener('click', popupOpenFunction);
+}
+
+for(var i = 0; i < servicesCaption.length; i++){
+    servicesCaption[i].addEventListener('click', functionDeployment);
+}
+
+function functionDeployment(e){
+	var target = e.target;
+	if(target.tagName == 'P') target = e.target.parentElement;
+	if(!target.classList.contains('click')){
+		closeDeployment(sercicesList);
+		closeDeployment(servicesCaption);
+		openDeployment(target);
+		openDeployment(target.nextElementSibling);
+	}
+	else {
+		closeDeployment(sercicesList);
+		closeDeployment(servicesCaption);
+	}
+}
+
+function closeDeployment(cl){
+	for(var i = 0; i < cl.length; i++){
+		cl[i].classList.remove('click');
+	}
+}
+
+function openDeployment(e){
+	e.classList.add('click');
+}
+
+
+
+function serviceChoice(dataId){
+	for(var i = 0; i < servicesCaption.length; i++){
+		if(servicesCaption[i].getAttribute('data-id') == dataId){
+			//Обработчик Клик
+			var clickEvent = new Event('click');
+			servicesCaption[i].dispatchEvent(clickEvent);
+			return;
+		}
+	}
+}
+
+/*Форма записи*/
 

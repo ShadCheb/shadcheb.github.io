@@ -2,8 +2,11 @@ body{
   	margin: 0;
   	padding: 0;
   	background: #000;
+    font-size: 14px;
+    line-height: 24px;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
+    min-width: 960px;
  }
 p, h2, h3{
   margin: 0;
@@ -44,7 +47,8 @@ p, h2, h3{
   -o-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
   -ms-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
   box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
-  z-index: 100;
+  z-index: 10;
+  cursor: pointer;
 }
 
 
@@ -58,7 +62,7 @@ p, h2, h3{
   -o-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
   -ms-box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
   box-shadow: 0 2px 2px 2px rgba(0,0,0,0.18);
-  z-index: 100;
+  z-index: 10;
 }
   .menu-up-logo{
      float: left;
@@ -198,7 +202,7 @@ p, h2, h3{
     -ms-transform: rotate(-4deg);
     transform: rotate(-4deg);
     background: #006d6a;
-    z-index: 10;
+    z-index: 8;
     cursor: pointer;
   }
     .btn-entry-up::before{
@@ -281,7 +285,7 @@ p, h2, h3{
         background: #006d6a;
         visibility: hidden;
       }
-      .courses-menu>ul>li.courses-active::after{
+      .courses-menu>ul>li.courses-s::after{
         visibility: visible;
       }
         .courses-menu>ul>li:hover::after{
@@ -449,7 +453,16 @@ p, h2, h3{
     font-size: 55px;
     line-height: 66px;
   }
-
+.clarification-caption{
+  color: #000;
+  text-align: center;
+  margin-bottom: 30px;
+}
+  .clarification-caption p{
+    font-size: 20px;
+    line-height: 24px;
+    width: 80%;
+  }
   .advantages-area{
     position: relative;
     background: rgba(255, 255, 255, 0.11);
@@ -1045,4 +1058,243 @@ footer{
       .seti-i{
         background: url(img/inst.png) no-repeat center;
       }
-                  
+          
+
+/*Всплывающие окна*/
+.modal-content-discount, .modal-content-pricelist, .modal-content-form{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 750px;
+  margin-top: 150px;
+  margin-left: -455px;
+  padding: 50px 80px;
+  color: #000;
+  z-index: 20;
+  background: #f8f3f0 url(img/backgrond_1_litle.png);
+  box-shadow: 0 30px 50px rgba(0,0,0,.7);
+}
+.modal-content-show{
+  display: block;
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0% {transform: translateX(-2000px);}
+  70% {transform: translateX(30px);}
+  90% {transform: translateX(-10px);}
+  100% {transform: translateX(0px);}
+}
+  .modal-content-discount .caption,
+  .modal-content-pricelist .caption,
+  .modal-content-form .caption{
+    color: #000;
+  }
+  .modal-content-discount .stock{
+    overflow: hidden;
+    padding-bottom: 50px;
+  }
+    .stock-name{
+      position: relative;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+      .stock-name::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: #000;
+      }
+      .stock-name p{
+        font-size: 24px;
+        line-height: 29px;
+        padding-bottom: 10px
+      }
+      .stock-date{
+        float: left;
+        text-align: left;
+        width: 250px;
+      }
+         .stock-date p{
+          font-size: 14px;
+          line-height: 30px;
+         }
+      .stock-price{
+        float: right;
+        width: 200px;
+      }
+        .stock-price .stock-price-old,
+        .stock-price .stock-price-new{
+          float: left;
+        }
+          .stock-price .stock-price-old{
+            position: relative;
+            width: 120px;
+            z-index: 5;
+          }
+            .stock-price .stock-price-old::after{
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 40px;
+              top: 50%;
+              height: 2px;
+              background: red;
+              transform: rotate(15deg);
+            }
+            .stock-price-old p{
+              font-size: 18px;
+              line-height: 30px;
+              padding-left: 10px;
+            }
+          .stock-price-new{
+            width: 80px;
+          }
+            .stock-price-new p{
+              font-size: 24px;
+              line-height: 30px;
+              font-weight: 700;
+              color: #17a09e;
+            }
+.modal-content-close{
+  position: absolute;
+  top: 0;
+  right: -50px;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  cursor: pointer;
+  background: url(img/Cross.png) no-repeat center;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+  .modal-content-close:hover{
+    opacity: 1;
+  }
+
+
+
+/*.modal-content-pricelist{
+  display: block;
+}*/
+.sercices-block-caption{
+  position: relative;
+  text-align: left;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+  .sercices-block-caption, .sercices-block-caption::after{
+    transition: 0.3s ease-in-out;
+  }
+  .sercices-block-caption:hover::after{
+    background: #17a09e;
+  }
+  .sercices-block-caption:hover{
+    color: #17a09e;
+  }
+  .sercices-block-caption::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #000;
+  }
+
+  .sercices-block-caption p{
+    font-size: 24px;
+    line-height: 30px;
+  }
+    .sercices-block-list{
+      padding-left: 24px;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.5s ease-in-out;
+    }
+    .services-block-elem{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      overflow: hidden;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+      .services-elem-service{
+        padding-right: 20px;
+        order: 1;
+      }
+      .services-elem-ellipsis{
+        order: 2;
+        flex-grow: 1;
+        height: 18px;
+        background: url(img/dot.gif) repeat-x bottom;
+      }
+      .services-elem-btn{
+        order: 4;
+        padding: 0 30px;
+        background: #17a09e;
+        cursor: pointer;
+      }
+      .services-elem-price{
+        order: 3;
+        float: right;
+        padding: 0 30px;
+      }
+  .sercices-block-caption.click{
+    color: #17a09e;
+  }
+    .sercices-block-caption.click::after{
+      background: #17a09e;
+    }
+  .sercices-block-list.click{
+    opacity: 1;
+    height: auto;
+  }
+
+
+/*Форма заявки*/
+.modal-content-form input{
+  width: 95.5%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+  background: transparent;
+  outline: none;
+}
+  .modal-content-form input:focus{
+    border: 1px solid #17a09e;
+  }
+  .modal-content-form .btn-forum{
+    clear: both;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    background: #17a09e;
+    border: none;
+    padding: 16px 0;
+    cursor: pointer;
+  }
+
+
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    cursor: default;
+}
