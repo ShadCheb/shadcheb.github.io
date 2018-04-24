@@ -14,12 +14,14 @@
 
 	<div class="container clearfix">
 
-		<div class="menu-up-logo">
+		<div class="logo" id="logo">
 				<img src="img/logo.png" alt="Permanent Studio">
 				<p>Margarita Dianova</p>
 				<p>permanent studio</p>
+				<a href="index.html" class="logo-link"></a>
 		</div>
 
+		<div class="menu-up-btn"></div>
 		<div class="menu-up-navigation">
 			<ul>
 				<li><a href="#0" id="courses">Курсы</a></li>
@@ -127,7 +129,8 @@
 						<div class="courses-content-h2"><h2></h2><div class="line-h2-litle"></div></div>
 						<div class="courses-content-intended"><p></p></div>
 						<div class="courses-content-description"><p></p></div>
-						<div class="courses-content-btn" onclick="popupOpenForm()"><p>Записаться</p></div>					
+						<div class="courses-content-botton"><button class="courses-content-btn">Записаться</button></div>
+						<!--<div class="courses-content-botton"><button class="courses-content-btn" onclick="popupOpenForm()">Записаться</button></div>-->
 					</div>
 				</div>
 			</div>
@@ -253,7 +256,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Наращивание ресниц</h3>
-					<button class="service-btn" data-id="services-1">Узнать цены</button>
+					<button class="service-btn" data-id="service-1">Узнать цены</button>
 				</div>
 				
 				<div class="service-img"></div>
@@ -275,7 +278,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Перманентный макияж</h3>
-					<button class="service-btn" data-id="services-2">Узнать цены</button>
+					<button class="service-btn" data-id="service-2">Узнать цены</button>
 				</div>
 			</div>
 
@@ -286,7 +289,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Удаление татуажа</h3>
-					<button class="service-btn" data-id="services-3">Узнать цены</button>
+					<button class="service-btn" data-id="service-3">Узнать цены</button>
 				</div>
 				
 				<div class="service-img"></div>
@@ -308,7 +311,7 @@
 				<div class="service-text-2"></div>
 				<div class="service-text-3">
 					<h3>Депиляция шугаринг</h3>
-					<button class="service-btn" data-id="services-4">Узнать цены</button>
+					<button class="service-btn" data-id="service-4">Узнать цены</button>
 				</div>
 			</div>
 
@@ -539,37 +542,181 @@
 	</div>
 	
 	<div class="caption">
-		<h2>Акции</h2>
+		<h2>Пакет услуг</h2>
 	</div>
-	<div class="stock">
-		
-		<div class="stock-name">
-			<p>Наращивание ресниц + перманентный макияж губ</p>
-		</div>
-		<div class="stock-date">
-			<p>c 07.07.2017 по 08.08.2018</p>
-		</div>
-		<div class="stock-price">
-			<div class="stock-price-old"><p>1000 р.</p></div>
-			<div class="stock-price-new"><p>800 р.</p></div>
-		</div>
 
-	</div>
-	<div class="stock">
-		
-		<div class="stock-name">
-			<p>Наращивание ресниц + перманентный макияж губ</p>
-		</div>
-		<div class="stock-date">
-			<p>c 07.07.2017 по 08.08.2018</p>
-		</div>
-		<div class="stock-price">
-			<div class="stock-price-old"><p>1000 р.</p></div>
-			<div class="stock-price-new"><p>800 р.</p></div>
-		</div>
+	<div class="stock-window">
+		<div class="stock-list">
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #1</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">Перманент 2 зон водин день:</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент бровей и век</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
 
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент бровей и губ</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент век и губ</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-top-master-header">Топ-мастер</div>
+					<div class="stock-top-master-list">18000р <span>(экономия 2000р)</span></div>
+					<div class="stock-top-master-list">18000р <span>(экономия 2000р)</span></div>
+					<div class="stock-top-master-list">18000р <span>(экономия 2000р)</span></div>
+				</div>
+				<div class="stock-master">
+					<div class="stock-master-header">Мастер</div>
+					<div class="stock-master-list">10800р <span>(экономия 1200р)</span></div>
+					<div class="stock-master-list">10800р <span>(экономия 1200р)</span></div>
+					<div class="stock-master-list">10800р <span>(экономия 1200р)</span></div>
+				</div>
+			</div>
+
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #2</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">Перманент 3 зон водин день:</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент бровей, век и губ</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-top-master-header">Топ-мастер</div>
+					<div class="stock-top-master-list">24000р <span>(экономия 6000р)</span></div>
+				</div>
+				<div class="stock-master">
+					<div class="stock-master-header">Мастер</div>
+					<div class="stock-master-list">14500р <span>(экономия 3500р)</span></div>
+				</div>
+			</div>
+
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #3</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">&nbsp</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент бровей + ботокс для ресниц</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-top-master-header">Топ-мастер</div>
+					<div class="stock-top-master-list">11500р <span>(экономия 1000р)</span></div>
+				</div>
+				<div class="stock-master">
+					<div class="stock-master-header">Мастер</div>
+					<div class="stock-master-list">7500р <span>(экономия 1000р)</span></div>
+				</div>
+			</div>
+
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #4</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">&nbsp</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Наращивание ресниц + оформление бровей</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-top-master-header">Топ-мастер</div>
+					<div class="stock-top-master-list">скидка 500р</div>
+				</div>
+				<div class="stock-master">
+					<div class="stock-master-header">Мастер</div>
+					<div class="stock-master-list">скидка 500р</div>
+				</div>
+			</div>
+
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #5</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">&nbsp</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент бровей + ресницы классика</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-top-master-header">Топ-мастер</div>
+					<div class="stock-top-master-list">11700р <span>(экономия 1000р)</span></div>
+				</div>
+				<div class="stock-master">
+					<div class="stock-master-header">Мастер</div>
+					<div class="stock-master-list">7700р <span>(экономия 1000р)</span></div>
+				</div>
+			</div>
+
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #6</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">&nbsp</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Перманент губ + ресницы классика</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-top-master-header">Топ-мастер</div>
+					<div class="stock-top-master-list">11700р <span>(экономия 1000р)</span></div>
+				</div>
+				<div class="stock-master">
+					<div class="stock-master-header">Мастер</div>
+					<div class="stock-master-list">7700р <span>(экономия 1000р)</span></div>
+				</div>
+			</div>
+
+			<div class="stock">
+				<div class="stock-name">
+					<p>Пакет #7</p>
+				</div>
+				<div class="stock-option">
+					<div class="stock-option-header">Депиляция/шугаринг:</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Ноги + бикини</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+					<div class="stock-option-flex">
+						<div class="stock-option-list">Ноги + руки + бикини</div>
+						<div class="stock-option-ellipsis"></div>
+					</div>
+				</div>
+				<div class="stock-top-master">
+					<div class="stock-option-header">&nbsp</div>
+					<div class="stock-top-master-list">2500р</div>
+					<div class="stock-top-master-list">2000р</div>
+				</div>
+			</div>
+
+			<div class="stock-block">
+			</div>
+		</div>
+		
+		<div class="gradient-up"></div>
+		<div class="gradient-down"></div>
 	</div>
-	
+
 </div>
 
 
@@ -582,71 +729,43 @@
 		<h2>Прайс-лист</h2>
 	</div>
 
-	<div class="services-block">
-		<div class="sercices-block-caption" data-id="services-1">
-			<p>Наращивание ресниц</p>
+	
+<div class="window-block">
+		<div class="services-modal-list"></div>
+	
+		<div class="scroll-block">
+			<div class="scroll-up"></div>
+			<div class="scroll-slider"></div>
+			<div class="scroll-down"></div>
 		</div>
-		<div class="sercices-block-list">
-			<div class="services-block-elem">
-				<div class="services-elem-service">
-					<p>Классическое</p>
-				</div>
-				<div class="services-elem-ellipsis"></div>
-				<div class="services-elem-btn">
-					Записаться
-				</div>
-				<div class="services-elem-price">
-					<p>2700</p>
-				</div>
-			</div>
+</div>
+
+
+	<template id="services-template" style="display: none">
+		<div class="services-block"></div>
+		<div class="services-block-caption">
+			<p></p>
+		</div>
+		
+		<div class="services-block-subtitle">
+			<p></p>
+		</div>
+
+		<div class="services-block-list"></div>
 
 			<div class="services-block-elem">
 				<div class="services-elem-service">
-					<p>Двойной объем</p>
+					<p></p>
 				</div>
 				<div class="services-elem-ellipsis"></div>
-				<div class="services-elem-btn">
+				<button class="services-elem-btn">
 					Записаться
-				</div>
+				</button>
 				<div class="services-elem-price">
-					<p>3000</p>
+					<p></p>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<div class="services-block">
-		<div class="sercices-block-caption" data-id="services-2">
-			<p>Перманентный макияж</p>
-		</div>
-		<div class="sercices-block-list">
-			<div class="services-block-elem">
-				<div class="services-elem-service">
-					<p>Перманентный макияж глаз - стрелки</p>
-				</div>
-				<div class="services-elem-ellipsis"></div>
-				<div class="services-elem-btn">
-					Записаться
-				</div>
-				<div class="services-elem-price">
-					<p>10000</p>
-				</div>
-			</div>
-
-			<div class="services-block-elem">
-				<div class="services-elem-service">
-					<p>Перманентный макияж губ</p>
-				</div>
-				<div class="services-elem-ellipsis"></div>
-				<div class="services-elem-btn">
-					Записаться
-				</div>
-				<div class="services-elem-price">
-					<p>10000</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	</template>
 
 </div>
 
@@ -662,6 +781,7 @@
 	<div class="clarification-caption">Заполните форму и мы с Вами обязательно свяжимся для подтверждения записи</div>
 	
 	<form action="/echo" method="post">
+		<div class="box-services-arena"></div>
 		<input type="text" class="client-name" name="name" placeholder="Имя" required>
 		<input type="text" class="client-phone" name="phone" placeholder="Номер телефона" required>
 		<input type="text" class="client-mail" name="email" placeholder="Электронная почта">
@@ -672,6 +792,27 @@
 	<form>
 
 </div>
+
+
+<div class="modal-content-choice"> 
+	<div class="modal-content-close">
+		Закрыть
+	</div>
+
+	<div class="choice-block">
+		<button class="btn-add-service">Добавить</button>
+		<button class="btn-form">Оформить</button>
+	</div>
+	
+</div>
+
+
+<template id="box-services-template" style="display: none;">
+	<div class="box-services-element">
+		<p></p>
+		<button class="box-services-element-close">X</button>
+	</div>
+</template>
 
 <div class="overlay"></div>
 

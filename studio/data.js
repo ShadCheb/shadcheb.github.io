@@ -5,6 +5,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "brows-course-1",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -14,6 +15,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "brows-course-2",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -23,6 +25,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "brows-course-3",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -32,6 +35,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "lashes-course-1",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -41,6 +45,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "lashes-course-2",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -50,6 +55,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "lashes-course-3",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -59,6 +65,7 @@ __jsonpFunction([{
   "durability": "1 день",
   "price": "10 000р",
   "intended": "Для начинающих",
+  "id": "lashes-course-4",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -68,6 +75,7 @@ __jsonpFunction([{
   "durability": "2 день",
   "price": "20 000р",
   "intended": "Для начинающих",
+  "id": "lashes-course-5",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -77,6 +85,7 @@ __jsonpFunction([{
   "durability": "2 день",
   "price": "20 000р",
   "intended": "Для начинающих",
+  "id": "lashes-course-6",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -86,6 +95,7 @@ __jsonpFunction([{
   "durability": "2 день",
   "price": "20 000р",
   "intended": "Для начинающих",
+  "id": "brows-course-4",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -95,6 +105,7 @@ __jsonpFunction([{
   "durability": "2 дня",
   "price": "20 000р",
   "intended": "Для начинающих",
+  "id": "lips-course-1",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 },
 {
@@ -104,6 +115,7 @@ __jsonpFunction([{
   "durability": "6 дней",
   "price": "20 000р",
   "intended": "Для начинающих",
+  "id": "all-course-1",
   "description": "Lorem ipsum dolor sit amet,   consectetur adipisicing elit. Vitae deleniti,  reiciendis molestias id harum, magnam nulla quaerat  quod praesentium, quos sequi? Laudantium, nisi tempora accusamus, aliquam quisquam vel. Nihil, laborum."
 }
 ]);
