@@ -214,7 +214,6 @@ lightGallery(document.querySelector('#gallery-gallery'));
     /* Паралакс */
     var scene = document.getElementById('parallax-1');
 
-    console.log(scene);
     var parallaxInstance = new Parallax(scene);
 
 }());

@@ -1,9 +1,9 @@
 <?php
 
-$to = "bezpalenko.lashtrener@yandex.ru";
+$to = "shpot84@mail.ru";
 
 $subject = "Сообщение с сайта";
-$email = "vikabezpalenko1@gmail.com ";
+$email = "shpot84@mail.ru";
 
 if ($_POST) {
 
