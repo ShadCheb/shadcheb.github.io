@@ -183,7 +183,7 @@ function openModal(e) {
 
     /*Ответы на вопросы*/
 
-    let answersBlocks = document.querySelector('.question__blocks');
+    /* let answersBlocks = document.querySelector('.question__blocks');
     let openAnswerBlock = '';
 
     answersBlocks && answersBlocks.addEventListener('click', function(e) {
@@ -219,7 +219,7 @@ function openModal(e) {
         openAnswerBlock = answerBlock;
 
         $(openAnswerBlock).slideToggle(300);
-    });
+    }); */
 
     /* Паралакс */
     var scene = document.getElementById('parallax-1');
@@ -259,4 +259,9 @@ function openModal(e) {
       }, 300);
     });
 
+
+    /*Маска*/
+    $(function(){
+      $(".form__phone").mask("+7 (999) 999-99-99?9");
+    });
 }());
