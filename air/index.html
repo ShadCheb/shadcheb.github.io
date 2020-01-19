@@ -8,6 +8,7 @@
 	<meta name="description" content="LUNULA Nail training centre - это современный центр, по развитию мастеров Nail - индустрии в городе Минске, который был открыт на базе студий маникюра и педикюра LUNULA NAIL STUDIO. " />
     <title>Системы вентиляции и кондиционирования | Обслуживание, ремонт, монтаж</title>
 
+    <link rel="stylesheet" href="style/lightgallery.css" />
     <link rel="stylesheet" href="style/style.css" />
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -31,6 +32,7 @@
                     <li><a href="#0" data-menu="service" rel="contents">Услуги</a></li>
                     <li><a href="#0" data-menu="description" rel="contents">Описание услуг</a></li>
                     <li><a href="#0" data-menu="advantages" rel="contents">Преимущества</a></li>
+                    <li><a href="#0" data-menu="advantages" rel="contents">Наши работы</a></li>
                 </ul>
             </nav>
             <div class="main__contact">
@@ -48,6 +50,7 @@
                         </svg>
                     </span>
                 </div>
+                <div class="main__delivery">Доставка по всей России</div>
             </div>
         </div>
         <div class="main__content">
@@ -884,6 +887,33 @@
     </div>
 </section>
 
+<section class="gallery">
+  <div class="container">
+      <div class="caption__h2--block caption__h2--center">
+          <h2 class="caption__h2" role="heading">Наши <span>работы</span></h2>
+      </div>
+      <div class="block_gallery" id="gallery-gallery">
+          <a href="images/gallery/gallery-big-1.jpg"><img src="images/gallery/gallery-small-1.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-2.jpg"><img src="images/gallery/gallery-small-2.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-1.jpg"><img src="images/gallery/gallery-small-1.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-1.jpg"><img src="images/gallery/gallery-small-1.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-1.jpg"><img src="images/gallery/gallery-small-1.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-1.jpg"><img src="images/gallery/gallery-small-1.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-1.jpg"><img src="images/gallery/gallery-small-1.jpg" alt=""></a>
+          <a href="images/gallery/gallery-big-2.jpg"><img src="images/gallery/gallery-small-2.jpg" alt=""></a>
+      </div>
+      <div class="gallery__video-blocks">
+      </div>
+  </div>
+</section>
+
+<template style="display: none;" id="template-video">
+  <article class="gallery__video-block" data-video="">
+      <div class="video-block__video"></div>
+      <button type="button" class="video-block__play"></button>
+  </article>
+</template>
+
 <footer class="footer">
     <div class="container">
         <div class="footer__logo">
@@ -912,6 +942,34 @@
     </div>
 </section>
 
+<div class="link-stock">%</div>
+
+<section class="stock">
+  <div class="container">
+    <div class="stock__blocks">
+      <button class="stock__close">
+        <span></span>
+        <span></span>
+      </button>
+      <div>
+        <div class="stock__date">
+          <p class="stock__date__number">10</p>
+          <p class="stock__date__month">июня</p>
+        </div>
+        <div class="stock__header">
+          <p class="stock__header__p1">Кондиционер</p>
+          <p class="stock__header__caption">HYUNDAI H-AR16-09H</p>
+          <p class="stock__header__p2">выгодное предложение</p>
+        </div>
+        <div class="stock__price">
+          <p class="stock__price__new">15 200 р</p>
+          <p class="stock__price__old">18 500 р</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <button class="btn-menu">
     <span></span>
@@ -922,6 +980,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/parallax.min.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
+<script src="js/lightgallery.min.js"></script>
 <script src="js/js.js"></script>
 
 
