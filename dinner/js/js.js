@@ -72,7 +72,6 @@ $(window).on('load', () => {
       e.preventDefault();
 
     $els.each(function(j){
-        // console.log($(this));
         $(this).css('--top',$(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -10) - 30);
         $(this).css('--delay-in', j * .1 + 's');
         $(this).css('--delay-out', (count - j) * .1+'s');
@@ -237,8 +236,6 @@ $(window).on('load', () => {
       else dataForm['modal'] = buttonModal;
 
       dataForm['selected'] = getSelectedList();
-
-      console.log(dataForm);
 
       $.ajax({
           url: './mail.php',
