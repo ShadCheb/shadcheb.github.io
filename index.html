@@ -16,28 +16,30 @@
         <div class="main__top-navbar">
           <div>
             <a class="nav__logo" itemprop="logo" itemtype="https://schema.org/ImageObject">МАНИКО</a>
-            <nav class="main__nav">
+            <nav class="main__nav js-nav">
                 <ul>
                   <li class="sub-menu">
                     <a class="a__label" href="#0">Страхование</a>
                     <ul>
-                      <li>ОСАГО</li>
-                      <li>КАСКО</li>
-                      <li>Техосмотр</li>
-                      <li>Ипотечное страхование</li>
+                      <li><a href="#0" data-menu="osago" rel="contents">ОСАГО</a></li>
+                      <li><a href="#0" data-menu="kasko" rel="contents">КАСКО</a></li>
+                      <li><a href="#0" data-menu="inspection" rel="contents">Техосмотр</a></li>
+                      <li><a href="#0" data-menu="mortgage" rel="contents">Ипотечное страхование</a></li>
                     </ul>
                   </li>
-                  <li><a href="#0" data-menu="price" rel="contents">Компания</a></li>
+                  <li><a href="#0" data-menu="about" rel="contents">Компания</a></li>
                   <!-- <li><a href="#0" data-menu="pay" rel="contents">Новости</a></li> -->
-                  <li><a href="#0" data-menu="contacts" rel="contents">Отзывы</a></li>
+                  <li><a href="#0" data-menu="reviews" rel="contents">Отзывы</a></li>
                   <li><a href="#0" data-menu="contacts" rel="contents">Контакты</a></li>
                 </ul>
             </nav>
             <div class="grow"></div>
             <div class="nav__phone">
               <a href="tel:+78352604650" itemprop="telephone" class="link__phone"><span>8(8352) </span> 60-46-50</a>
-              <a href="https://api.whatsapp.com/send?phone=79520225930" itemprop="telephone" class="link__social link--wh-upp">8952-022-59-30</a>
-              <a href="viber://chat?number=%2B79520225930" itemprop="telephone" class="link__social link--viber">8952-022-59-30</a>
+              <div>
+                <a href="https://api.whatsapp.com/send?phone=79520225930" itemprop="telephone" class="link__social link--wh-upp">8952-022-59-30</a>
+                <a href="viber://chat?number=%2B79520225930" itemprop="telephone" class="link__social link--viber">8952-022-59-30</a>
+              </div>
             </div>
           </div>
         </div>
@@ -155,7 +157,7 @@
             <div class="service__text">
               <h3 class="service__h3">ОСАГО</h3>
               <p class="service__price">от 988 рублей</p>
-              <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
+              <a href="#0" class="service__link" data-menu="osago">Подробнее</a>
             </div>
           </article>
           <article class="service__block service__block--1">
@@ -165,7 +167,7 @@
             <div class="service__text">
               <h3 class="service__h3">КАСКО</h3>
               <p class="service__price">от 1 600 рублей</p>
-              <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
+              <a href="#0" class="service__link" data-menu="kasko">Подробнее</a>
             </div>
           </article>
           <article class="service__block service__block--1">
@@ -175,7 +177,7 @@
             <div class="service__text">
               <h3 class="service__h3">Ипотечное страхование</h3>
               <p class="service__price">от 600 рублей</p>
-              <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
+              <a href="#0" class="service__link" data-menu="mortgage">Подробнее</a>
             </div>
           </article>
           <article class="service__block service__block--1">
@@ -185,7 +187,7 @@
             <div class="service__text">
               <h3 class="service__h3">Техосмотр</h3>
               <p class="service__price">от 430 рублей</p>
-              <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
+              <a href="#0" class="service__link" data-menu="contents">Подробнее</a>
             </div>
           </article>
           <article class="service__block service__block--1">
@@ -195,10 +197,10 @@
             <div class="service__text">
               <h3 class="service__h3">Страхование здоровья и жизни</h3>
               <p class="service__price">от 150 рублей</p>
-              <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
+              <a href="#0" class="service__link" data-menu="mortgage">Подробнее</a>
             </div>
           </article>
-          <article class="service__block service__block--1">
+          <!-- <article class="service__block service__block--1">
             <div class="service__img">
               <img src="images/puteshestvie.jpg" alt="Страхование для путешественников">
             </div>
@@ -207,7 +209,7 @@
               <p class="service__price">от 199 рублей</p>
               <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
             </div>
-          </article>
+          </article> -->
           <article class="service__block service__block--1">
             <div class="service__img">
               <img src="images/imushestvo.jpg" alt="Страхование имущества">
@@ -215,7 +217,7 @@
             <div class="service__text">
               <h3 class="service__h3">Страхование имущества</h3>
               <p class="service__price">от 350 рублей</p>
-              <a href="#0" class="service__link" data-menu="service-1">Подробнее</a>
+              <a href="#0" class="service__link" data-menu="mortgage">Подробнее</a>
             </div>
           </article>
           
@@ -224,7 +226,7 @@
     </section>
 
 
-    <section class="item" id="osago">
+    <section class="item item--right" id="osago">
       <div class="item__bcg--green">
         <div class="container">
           <div class="caption__h2">
@@ -237,6 +239,8 @@
                 <div class="item__img__mask">
                   <img src="images/car-1.jpg" alt="ОСАГО в МАНИКО">
                 </div>
+                <div class="bcg-zigzag--orange item__bcg-1"></div>
+                <div class="bcg-zigzag--white item__bcg-2"></div>
               </div>
             </div>
             <div class="item__text">
@@ -248,16 +252,18 @@
                 транспортным средством.</p>
               <p class="text__p">Полис ОСАГО позволит компенсировать ущерб, который вы как 
                 водитель причинили имуществу и здоровью третьих лиц (пассажиров и пешеходов).</p>
+              <div class="item__btn container">
+                <button class="btn-2 js-open_modal" 
+                  data-modal="modal__call"
+                  data-type="Оформить полис ОСАГО">Оформить</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="item__btn container">
-        <button class="btn-1 js--record__link">Оформить</button>
-      </div>
+      </div>     
     </section>
 
-    <section class="item" id="osago">
+    <section class="item" id="kasko">
       <div class="item__bcg--green">
         <div class="container">
           <div class="caption__h2">
@@ -272,20 +278,93 @@
                 возместят этот урон.</p>
               <p class="text__p">Владелец авто получит деньги, или машину отремонтируют за счет 
                 страховой компании. Тарифы каско устанавливает каждый страховщик самостоятельно.</p>
+              <div class="item__btn container">
+                <button class="btn-2 js-open_modal" 
+                  data-modal="modal__call"
+                  data-type="Оформить Каско">Оформить</button>
+              </div>
             </div>
             <div class="item__img">
               <div class="item__img__shadow">
                 <div class="item__img__mask">
                   <img src="images/car-2.jpg" alt="ОСАГО в МАНИКО">
                 </div>
-                <div class="bcg__listke take__bcg--list"></div>
+                <div class="bcg-zigzag--orange item__bcg-1"></div>
+                <div class="bcg-zigzag--white item__bcg-2"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="item__btn container">
-        <button class="btn-1 js--record__link">Оформить</button>
+    </section>
+
+    <section class="item item--right" id="inspection">
+      <div class="item__bcg--green">
+        <div class="container">
+          <div class="caption__h2">
+            <span>Техосмотр</span>
+            <h2>Техосмотр</h2>
+          </div>
+          <div class="item__body">
+            <div class="item__img">
+              <div class="item__img__shadow">
+                <div class="item__img__mask">
+                  <img src="images/osmotr-1.jpg" alt="Техосмотр в МАНИКО">
+                </div>
+                <div class="bcg-zigzag--orange item__bcg-1"></div>
+                <div class="bcg-zigzag--white item__bcg-2"></div>
+              </div>
+            </div>
+            <div class="item__text">
+              <p class="text__p">Необходим для получения полиса ОСАГО</p>
+              <p class="text__p"><span class="text__label">Качественный Техосмотр для всех видов транспорта</p>
+              <p class="text__p">Помогаем автовладельцам в прохождении технического осмотра. Официальная диагностическая карта -
+                с занесением в базу ЕАИСТО, аккредитованным в РСА оператором технического осмотра.</p>
+              <div class="item__btn container">
+                <button class="btn-2 js-open_modal" 
+                  data-modal="modal__call"
+                  data-type="Оформить полис ОСАГО">Пройти техосмотр</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>     
+    </section>
+
+    <section class="item" id="mortgage">
+      <div class="item__bcg--green">
+        <div class="container">
+          <div class="caption__h2">
+            <span>Ипотечное страхование</span>
+            <h2>Ипотечное страхование</h2>
+          </div>
+          <div class="item__body">
+            <div class="item__text">
+              <p class="text__p"><span class="text__label">Ипотечное страхование</span> — 
+                это способ защиты финансовых интересов 
+                заемщика по выплате кредита в случае наступления форс-мажорных обстоятельств и 
+                одно из обязательных требований банков и иных кредитных организаций, которые выдают 
+                ипотечные кредиты и займы.</p>
+              <p class="text__p">Помните, что наличие полиса обязательно для предоставления в 
+                банк, а выбор страховой компании всегда остается за вами.</p>
+              <p class="text__p">Аккредитация во всех банках, в том числе ПАО «Сбербанк»</p>
+              <div class="item__btn container">
+                <button class="btn-2 js-open_modal" 
+                  data-modal="modal__call"
+                  data-type="Оформить Каско">Получить полис</button>
+              </div>
+            </div>
+            <div class="item__img">
+              <div class="item__img__shadow">
+                <div class="item__img__mask">
+                  <img src="images/ipoteka-1.jpg" alt="Ипотечное страхование в МАНИКО">
+                </div>
+                <div class="bcg-zigzag--orange item__bcg-1"></div>
+                <div class="bcg-zigzag--white item__bcg-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -371,7 +450,7 @@
               </div>
               <p class="form__label">Оставляя заявку, вы соглашаетесь на обработку ваших персональных данных</p>
               <input type="hidden" name="test" value="">
-              <button class="btn-2 js-btn_submit">Отправить</button>
+              <button class="btn-2 js-btn_submit" data-type="Консультация">Отправить</button>
             </form>
           </div>
         </div>
@@ -391,30 +470,11 @@
       </div>
     </footer>
 
-        <button class="btn-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="main__menu">
-          <nav class="main__nav__mobile">
-            <ul>
-              <li>
-                  <a href="" data-menu="about-us" rel="contents">Страхование</a>
-              </li>
-              <li>
-                  <a href="" data-menu="services" rel="contents">Компания</a>
-              </li>
-              <li>
-                  <a href="" data-menu="gallery" rel="contents">Отзывы</a>
-              </li>
-              <li>
-                  <a href="" data-menu="advantages" rel="contents">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <button class="btn-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
         <section class="modal modal__call js-close_modal" data-modal="modal__call">
           <div class="modal__call__content">
@@ -440,7 +500,7 @@
                 <p class="form__label">Оставляя заявку, вы соглашаетесь на обработку ваших персональных данных</p>
                 <input type="hidden" name="test" value="" class="">
 
-                <button type="submit" class="btn-1 btn--orange js-btn_submit" onclick="ym(56484778, 'reachGoal', 'ZAYAVKA'); return true;">Отправить</button>
+                <button type="submit" class="btn-1 btn--orange js-btn_submit">Отправить</button>
               </form>
             </div>
           </div>

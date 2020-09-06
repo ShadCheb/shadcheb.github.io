@@ -19,7 +19,7 @@ if ($_POST) {
 		$email = trim(strip_tags($_POST['email']));
 		$emailindicated = $email;
 	}
-  if($_POST['product']) $product = trim(strip_tags($_POST['product']));
+  if($_POST['type']) $type = trim(strip_tags($_POST['type']));
 
   if($_POST['test']) {
     header('HTTP/1.1 500' );
@@ -35,8 +35,8 @@ if ($_POST) {
 	if ($emailindicated) {
 		$mess .= "Указанная почта: " . $emailindicated . "\r\n";
 	}
-	if ($product) {
-		$mess .= "Выбранный продукт: " . $product . "\r\n";
+	if ($type) {
+		$mess .= "Описание: " . $type . "\r\n";
   }
 	if ($message) {
 		$mess .= "Сообщение: " . $message . "\r\n";

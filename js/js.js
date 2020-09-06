@@ -6,152 +6,152 @@ $(window).on('load', () => {
      */
     $(function () {
         let modalList = {};  // буфер модальных окон
+        let dataSend = null;  // Дополнительные данные для отправки
 
         $('.js-open_modal').on('click', openModal);
 
         function openModal(e, modalName) {
-            if (e) {
-                e.stopPropagation();
-                // e.preventDefault();
+          if (e) {
+            e.stopPropagation();
+            // e.preventDefault();
 
-                // Устанавливаем продук, если он есть
-                let prod = e.target.dataset.product;
+            // Устанавливаем тип кнопки, если он есть
+            let type = e.target.dataset.type;
 
-                if (prod) product = prod;
-            }
-        
-            let modal = modalName || (e && e.target.dataset.modal);
+            if (type) dataSend = { type };
+          }
+      
+          let modal = modalName || (e && e.target.dataset.modal);
 
-            if (!modal) return;
+          if (!modal) return;
 
-            if (!modalList[modal]) {
-                let modalElement = document.querySelector('.' + modal);
+          if (!modalList[modal]) {
+              let modalElement = document.querySelector('.' + modal);
 
-                if (!modalElement) return;
+              if (!modalElement) return;
 
-                modalList[modal] = modalElement;
-            }
+              modalList[modal] = modalElement;
+          }
 
-            modalList[modal].classList.add('active');
-        
-            document.querySelector('body').style.cssText = 'overflow: hidden;';
+          modalList[modal].classList.add('active');
+      
+          document.querySelector('body').style.cssText = 'overflow: hidden;';
         };
 
 
         $('.js-close_modal').on('click', closeModal);
 
         function closeModal(e, modalName) {
-            if (e) {
-                e.stopPropagation();
-                // e.preventDefault();
-            }
-        
-            let modal = modalName || (e && e.target.dataset.modal);
+          if (e) {
+              e.stopPropagation();
+              // e.preventDefault();
+          }
+      
+          let modal = modalName || (e && e.target.dataset.modal);
 
-            if (!modal) return;
+          if (!modal) return;
 
-            if (!modalList[modal]) {
-                let modalElement = document.querySelector('.' + modal);
+          if (!modalList[modal]) {
+              let modalElement = document.querySelector('.' + modal);
 
-                if (!modalElement) return;
+              if (!modalElement) return;
 
-                modalList[modal] = modalElement;
-            }
+              modalList[modal] = modalElement;
+          }
 
-            // Удалаяем продукт
-            product = '';
+          // Удалаяем продукт
+          dataSend = null;
 
-            // Удаление alert
-            let alert = $(modalList[modal]).find('.alert-close');
+          // Удаление alert
+          let alert = $(modalList[modal]).find('.alert-close');
 
-            alert && alert.remove();
+          alert && alert.remove();
 
-            modalList[modal].classList.remove('active');
+          modalList[modal].classList.remove('active');
 
-            document.querySelector('body').style.cssText = '';
+          document.querySelector('body').style.cssText = '';
         }
 
         $('modal > div').on('click', function(e) {
-            e.stopPropagation();
-            // e.preventDefault();
+          e.stopPropagation();
+          // e.preventDefault();
         });
-    });
 
 
-    /*
+      /*
       * Отправка заявок
       */
-    $(function () {
         /* Маска на телефон */
         $('.input__phone').mask("+7 (999) 999-99-99");
         
         $('.js-btn_submit').on('click', sendMail);
 
         function sendMail(event){
-            event.preventDefault();
+          event.preventDefault();
 
-            let button = $(this);
-            let form = $(this).closest('form');
+          let button = $(this);
+          let form = $(this).closest('form');
 
-            // loader
-            form.addClass('load');
+          // loader
+          form.addClass('load');
 
-            button.attr('disabled', 'disabled');
-            
-            let resRequired = checkRequired(form);
+          button.attr('disabled', 'disabled');
+          
+          let resRequired = checkRequired(form);
 
-            if (!resRequired) {
-                button.prop('disabled', false);
-                form.removeClass('load');
+          if (!resRequired) {
+            button.prop('disabled', false);
+            form.removeClass('load');
 
-                return;
-            }
+            return;
+          }
 
-            let dataForm = {};
+          let dataForm = {};
 
-            form.find ('input, textearea').each((index, value) => {
-                dataForm[value.name] = $(value).val();
-            });
+          form.find ('input, textearea').each((index, value) => {
+            dataForm[value.name] = $(value).val();
+          });
 
-            if (product) dataForm['product'] = product;
-        
-            $.ajax({
-                url: './mail.php',
-                type: 'POST',
-                data: dataForm,
-            })
+          if (dataSend && dataSend.type) 
+            dataForm['type'] = dataSend.type;
+      
+          $.ajax({
+            url: './mail.php',
+            type: 'POST',
+            data: dataForm,
+          })
             .done((msg) => {
-                console.log(msg);
-                if(msg == "Ok"){
-                    let message = 'Ваша заявка принята. Мы скоро позвоним к Вам.';
-                    let succesTemplate = '<div class="alert alert-success"><p>'+ message +'</p></div>';
+              console.log(msg);
+              if(msg == "Ok"){
+                  let message = 'Ваша заявка принята. Мы скоро позвоним к Вам.';
+                  let succesTemplate = '<div class="alert alert-success"><p>'+ message +'</p></div>';
 
-                    form.removeClass('load');
-                    form.append(succesTemplate);
+                  form.removeClass('load');
+                  form.append(succesTemplate);
 
-                    let alert = form.find('.alert-success');
+                  let alert = form.find('.alert-success');
 
-                    setTimeout(() => {
-                        if (alert) {
-                            alert.remove();
-                        }
-                    }, 3000);
-                }
-                else {
-                    let message = 'Произошла ошибка. Попробуйте позже.';
+                  setTimeout(() => {
+                      if (alert) {
+                          alert.remove();
+                      }
+                  }, 3000);
+              }
+              else {
+                  let message = 'Произошла ошибка. Попробуйте позже.';
 
-                    button.prop('disabled', false);
-                    form.removeClass('load');
-                    alertDanger(form, message);
-                }
+                  button.prop('disabled', false);
+                  form.removeClass('load');
+                  alertDanger(form, message);
+              }
             })
             .fail(function(msg) {
               console.log(msg);
-                let message = 'Произошла ошибка. Попробуйте позже.';
+              let message = 'Произошла ошибка. Попробуйте позже.';
 
-                form.removeClass('load');
-                button.prop('disabled', false);
-                alertDanger(form, message);
+              form.removeClass('load');
+              button.prop('disabled', false);
+              alertDanger(form, message);
             })
         };
 
@@ -159,56 +159,56 @@ $(window).on('load', () => {
             let requiredList = form.find('.input__required');
             let validate = true;
             let validData = {
-                phone: (val) => {
-                    val = val.replace(/[()-\s+]/g, '');
+              phone: (val) => {
+                val = val.replace(/[()-\s+]/g, '');
 
-                    /* let re = /^\d[\d\(\)\ -]{4,14}\d$/;
-                    let valid = re.test(val); */
+                /* let re = /^\d[\d\(\)\ -]{4,14}\d$/;
+                let valid = re.test(val); */
 
-                    let valid = (val.length > 10) ? true : false;
+                let valid = (val.length > 10) ? true : false;
 
-                    return (valid) ? true : false;
-                },
-                email: (val) => {
-                    let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-                    let valid = re.test(val);
+                return (valid) ? true : false;
+              },
+              email: (val) => {
+                let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+                let valid = re.test(val);
 
-                    return (valid) ? true : false;
-                },
-                check: (val) => {
-                  return val;
-                }
+                return (valid) ? true : false;
+              },
+              check: (val) => {
+                return val;
+              }
             };
 
             requiredList.each((index, value) => {
-                let valid = value.dataset.valid;
-                let valueInput = (value.name == 'check') 
-                  ? value.checked
-                  : value.value;
+              let valid = value.dataset.valid;
+              let valueInput = (value.name == 'check') 
+                ? value.checked
+                : value.value;
 
-                if (valid && validData[valid]) {
-                    validate = validData[valid](valueInput);
-                }
+              if (valid && validData[valid]) {
+                validate = validData[valid](valueInput);
+              }
 
-                if (!valueInput || !validate) {
-                    value.classList.add('required');
+              if (!valueInput || !validate) {
+                value.classList.add('required');
 
-                    /* Убираем Error */
-                    form.find('input', 'textarea').on('click', (e) => {
-                        $(e.target).removeClass('required');
-                    });
-                }
+                /* Убираем Error */
+                form.find('input', 'textarea').on('click', (e) => {
+                    $(e.target).removeClass('required');
+                });
+              }
 
-                if (!valueInput) {
-                    alertDanger(form, 'Заполнены не все обязательные данные');
+              if (!valueInput) {
+                alertDanger(form, 'Заполнены не все обязательные данные');
 
-                    return false;
-                }
-                if (!validate) {
-                    alertDanger(form, 'Даные введены неверно.');
+                return false;
+              }
+              if (!validate) {
+                alertDanger(form, 'Даные введены неверно.');
 
-                    return false;
-                }
+                return false;
+              }
             });
 
             return validate;
@@ -255,43 +255,101 @@ $(window).on('load', () => {
     /*Меню перемещение*/
 
     function moveLink(link) {
-        if (!link) return;
-        link = '#' + link;
-        let V = 0.2;
-        let w = window.pageYOffset;  // прокрутка
-        let t = document.querySelector(link).getBoundingClientRect().top - 100;  // отступ от окна браузера до id
-        let start = null;
+      if (!link) return;
 
-        window.scrollTo(0,w + t);
+      link = '#' + link;
+      
+      let V = 0.2;
+      let w = window.pageYOffset;  // прокрутка
+      let t = document.querySelector(link).getBoundingClientRect().top - 40;  // отступ от окна браузера до id
+      let start = null;
+      requestAnimationFrame(step);  // функция анимации
+      function step(time) {
+        if (start === null) start = time;
+        var progress = time - start,
+            r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+        window.scrollTo(0,r);
+        if (r != w + t) {
+          requestAnimationFrame(step)
+        }
+      }
     }
 
     /*Меню*/
 
     let menubtn = document.querySelector('.btn-menu');
-    let menuNav = document.querySelector('.main__menu');
+    let menuNav = document.querySelector('.js-nav');
+    let servicesNav = document.querySelector('.service__blocks');
 
-    menubtn.addEventListener('click', closeMenu);
-    menuNav.addEventListener('click', closeMenu);
+    menubtn.addEventListener('click', toggleMenu);
+
+    // menubtn.addEventListener('click', closeMenu);
+    // menuNav.addEventListener('click', closeMenu);
     
-    function closeMenu(e) {
-        e.stopPropagation();
+    // function closeMenu(e) {
+    //   e.stopPropagation();
 
-        menubtn.classList.toggle('active');
-        menuNav.classList.toggle('open');
+    //   menubtn.classList.toggle('active');
+    //   menuNav.classList.toggle('open');
+    // }
+
+    function toggleMenu() {
+      if (this.classList.contains('active')) {
+        this.classList.remove('active');
+        menuNav.classList.remove('open');
+      } else {
+        this.classList.add('active');
+        menuNav.classList.add('open');
+      }
     }
 
-    document.querySelector('.main__nav').addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        let target = event.target;
+    function closeSubMenu() {
+      const activeElement = menuNav.querySelector('.active');
 
-        if(target.tagName != 'A') return;
+      if (activeElement) {
+        activeElement.classList.remove('active');
+      }
+      window.removeEventListener('click', closeSubMenu, true);
+    }
 
+    menuNav.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      let target = event.target;
+
+      if (target.tagName != 'A') return;
+
+      if (document.documentElement.clientWidth > 992) {
+        if (target.parentElement.classList.contains('sub-menu')) {
+          target.parentElement.classList.add('active');
+          window.addEventListener('click', closeSubMenu, true);
+        } else if (target.dataset.menu) {
+          moveLink(target.dataset.menu);
+        }
+      } else {
+        if (target.parentElement.classList.contains('sub-menu')) {
+          target.parentElement.classList.add('active');
+          window.addEventListener('click', closeSubMenu, true);
+        } else if (target.dataset.menu) {
+          menuNav.classList.remove('open');
+          menubtn.classList.remove('active');
+          moveLink(target.dataset.menu);
+        }
+      }
+    });
+
+    servicesNav.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      let target = event.target;
+
+      if (target.tagName != 'A') return;
+
+      if (target.dataset.menu) {
         moveLink(target.dataset.menu);
-
-        menubtn.classList.remove('active');
-        menuNav.classList.remove('open');
+      }
     });
 });
 
