@@ -279,7 +279,10 @@ $(window).on('load', () => {
 
     let menubtn = document.querySelector('.btn-menu');
     let menuNav = document.querySelector('.js-nav');
-    let servicesNav = document.querySelector('.service__blocks');
+    // let servicesNav = document.querySelector('.service__blocks');
+    let navLogo = document.querySelector('.nav__logo');
+
+    console.log(navLogo);
 
     menubtn.addEventListener('click', toggleMenu);
 
@@ -312,6 +315,14 @@ $(window).on('load', () => {
       window.removeEventListener('click', closeSubMenu, true);
     }
 
+
+    navLogo.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      moveLink('main');
+    })
+
     menuNav.addEventListener('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
@@ -339,17 +350,17 @@ $(window).on('load', () => {
       }
     });
 
-    servicesNav.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
+    // servicesNav.addEventListener('click', function(e) {
+    //   e.preventDefault();
+    //   e.stopPropagation();
       
-      let target = event.target;
+    //   let target = event.target;
 
-      if (target.tagName != 'A') return;
+    //   if (target.tagName != 'A') return;
 
-      if (target.dataset.menu) {
-        moveLink(target.dataset.menu);
-      }
-    });
+    //   if (target.dataset.menu) {
+    //     moveLink(target.dataset.menu);
+    //   }
+    // });
 });
 
